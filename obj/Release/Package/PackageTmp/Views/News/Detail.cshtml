@@ -1,0 +1,80 @@
+﻿@{
+    Layout = "~/Views/Shared/_layoutTrong.cshtml";
+}
+@using TrangChuWebsite.Models
+@functions{
+    public DataContext db = new DataContext();
+    public List<News> GetlistNews(int id)
+    {
+        List<News> listFirst = db.News.Where(tbl => tbl.hot == 1 && tbl.id != id).Take(3).ToList();
+        return listFirst;
+    }
+}
+<div class="home-content">
+    <div class="history">
+        <ul>
+            <li><a href="/Home">TRANG CHỦ /</a></li>
+            <li><a href="/Home/News">DANH SÁCH TIN TỨC /</a></li>
+            <li><a href="#"><span>&nbsp;NEWS DETAIL</span></a></li>
+        </ul>
+    </div>
+    <div class="">
+        <h1 class="news-name">@Model.name</h1>
+        <div class="News-content" style="margin-top: 40px;">
+            <div class="content-left">
+                <div class="text-content" id="description">
+                    @Html.Raw(Model.description)
+                </div>
+                <div class="main-image">
+                    <img src="~/Assets/Upload/News/@Model.photo">
+                </div>
+                <div class="text-content" id="content">
+                    @Html.Raw(Model.content)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dich-vu-title">
+        <p>TIN TỨC KHÁC</p>
+        <hr>
+    </div>
+    <div class="tin-tuc-content">
+        <ul>
+            @{
+                List<News> listNews = GetlistNews(Model.id);
+            }
+            @foreach (News item in listNews)
+            {
+                <li>
+                    <img src="~/Assets/Upload/News/@item.photo" alt="@item.name">
+                    <h1>@item.name</h1>
+                    @Html.Raw(item.description)
+                    <a href="/News/Detail/@item.id"><div class="chi-tiet">Chi tiết</div></a>
+                </li>
+            }
+        </ul>
+    </div>
+    <!-- New  -->
+    <!-- Dịch vụ  -->
+    <div class="dich-vu-title">
+        <p>CHÍNH SÁCH</p>
+        <hr>
+    </div>
+    <div class="dich-vu">
+        <div class="dich-vu-nd">
+            <img src="~/images/service1.jpg">
+            <div class="chinh-sach">
+                Chính sách vận chuyển<br>
+                <span>Miễn phí trong nội thành</span>
+            </div>
+        </div>
+        <div class="dich-vu-nd">
+            <img src="~/images/service2.jpg">
+            <div class="chinh-sach">
+                Chính sách thanh toán<br>
+                <span>Thanh toán online được giảm 2%</span>
+            </div>
+        </div>
+    </div>
+</div>
+

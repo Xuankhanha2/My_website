@@ -1,0 +1,61 @@
+﻿@{ 
+    Layout = "~/Views/Shared/_LayoutTrong.cshtml";
+}
+<div class="home-content">
+    <div class="page-content">
+        <div class="mini_menu">
+            <ul>
+                <li><a href="#"><span><i class="fas fa-user"></i></span> Thông tin tài khoản</a></li>
+                <li><a href="/Account/MyCheckout/@this.Session["Customer_id"].ToString()"><span><i class="fas fa-clipboard-list"></i></span> Đơn hàng của tôi</a></li>
+                <li><a href="#"><span><i class="fas fa-bell"></i></span> Thông báo</a></li>
+            </ul>
+        </div>
+        <div class="customer_infor">
+            <div class="page-title">Thông tin của tôi</div>
+            <div class="avatar_n_name">
+                <img src="/images/avatar-placeholder.png" alt="">
+                <h1>@Model.name</h1>
+            </div>
+            <div class="other_infor">
+                <form action="" method="post" enctype="multipart/form-data" onsubmit="check()">
+                    @Html.AntiForgeryToken()
+                    <div>
+                        <label>Tên: </label>
+                        <input type="text" name="customer_name" id="customer_name" required autocomplete="off" value="@Model.name">
+                    </div>
+                    <div>
+                        <label>Điện thoại: </label>
+                        <input type="text" name="phone" id="phone" required value="@Model.phone">
+                    </div>
+                    <div>
+                        <label>Email: </label>
+                        <input type="email" name="email" id="email" required autocomplete="off" value="@Model.email">
+                    </div>
+                    <div>
+                        <label>Địa chỉ: </label>
+                        <textarea name="address" id="address">@Model.address</textarea>
+                    </div>
+                    <div>
+                        <a href="#">Thay đổi mật khẩu ></a>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Lưu</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var b = document.getElementById("phone").value;
+    function check(){
+        var a = document.getElementById("phone").value;
+        reg = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
+        if(reg.test(a) == false){
+            alert("Số điện thoại chưa đúng");
+            document.getElementById("phone").value = b;
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+</script>

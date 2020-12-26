@@ -1,0 +1,70 @@
+﻿@{
+    Layout = "~/Views/Shared/_layoutTrong.cshtml";
+}
+@using TrangChuWebsite.Models
+@using PagedList.Mvc;
+@using System.Data.SqlClient;
+@using System.Configuration;
+@using System.Data;
+
+@model PagedList.IPagedList<Product>
+@functions{
+    //lay gia da duoc sale
+    public string priceDiscount(double price, int discount)
+    {
+        double _price = price - (price * discount) / 100;
+        return _price.ToString();
+    }
+
+}
+<div class="home-content">
+    <!-- History -->
+    <div class="history">
+        <ul>
+            <li><a href="/Home">TRANG CHỦ /</a></li>
+            <li><a href="#"><span>&nbsp;DANH MỤC</span></a></li>
+        </ul>
+        @*<div class="fill">
+                <h2>
+                    <i class="fas fa-filter"></i> Lọc sản phẩm
+                    <ul>
+                        <li><a href="#">Theo khoảng giá</a></li>
+                        <li><a href="#">Theo mục sản phẩm</a></li>
+                        <li><a href="#">Theo điểm đánh giá</a></li>
+                    </ul>
+                </h2>
+            </div>*@
+    </div>
+    <!-- history -->
+    <!-- Mục hai -->
+    <div class="trai-cay-moi-ngay">
+        @{
+            string _key = Request.QueryString["key"] != null ? Request.QueryString["key"] : "";
+        }
+        <h2>Kết quả tìm kiểm cho "@_key"</h2>
+        <div class="tcmn-content">
+            <ul>
+                @foreach (Product item in Model)
+                {
+                    <li>
+                        <a href="/Product/ChiTietSanPham/@item.id"><img src="~/Assets/Upload/Products/@item.photo"></a>
+                        <a href="/Product/ChiTietSanPham/@item.id">
+                            <h1>@item.name</h1>
+                        </a>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h2>@item.price đ</h2>
+                        <p>@priceDiscount(item.price, item.discount) đ</p>
+                        <a href="/Cart/Add/@item.id"><div class="buy btn-primary">Mua hàng</div></a>
+                    </li>
+                }
+            </ul>
+        </div>
+        @Html.PagedListPager(Model, page => Url.Action("PhanLoaiSanPham", new { id = ViewBag.id, page }))
+    </div>
+</div>

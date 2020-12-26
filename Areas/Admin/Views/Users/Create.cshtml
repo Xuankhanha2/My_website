@@ -1,0 +1,45 @@
+﻿@{
+    //load file _Layout.cshtml vao day
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@using TrangChuWebsite.Models
+<div class="add_user">
+    <style>
+        .add_user {
+            background-color: white;
+            width: 90%;
+            margin: auto;
+            padding-left: 25px;
+            padding-top: 20px;
+        }
+
+        label {
+            display: block;
+            color: black;
+        }
+
+        .txt {
+            border: 1px solid #ebebeb;
+            width: 80%;
+            display: block;
+            padding: 3px;
+        }
+
+        .btn {
+            padding: 5px 10px;
+            margin: 15px 0px;
+            color: white;
+        }
+    </style>
+    <form action="" method="post">
+        @Html.AntiForgeryToken()
+        <label>Họ tên</label>
+        <input type="text" name="hoten" value="" class="txt">
+        <label>Email</label>
+        <input type="text" name="email" value="" class="txt">
+        <label>Password</label>
+        <input type="text" name="password" value="" class="txt">
+        <input type="submit" name="submit" value="Gửi" class="btn btn-primary">
+        <input type="reset" value="reset" class="btn btn-secondary">
+    </form>
+</div>

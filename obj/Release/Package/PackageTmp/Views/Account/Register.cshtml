@@ -1,0 +1,65 @@
+﻿
+<!-- Main CSS-->
+<link href="~/Areas/Admin/Assets/css/theme.css" rel="stylesheet" media="all">
+<div class="page-wrapper">
+    <div class="page-content--bge5" style="height: auto !important">
+        <div class="container">
+            <div class="login-wrap" style="padding-top: 20px !important">
+
+                <div class="notify">
+                    @if (Request.QueryString["notify"] != null && Request.QueryString["notify"] == "passNotSame")
+                    {
+                        <div class="alert alert-danger"><i class="fas fa-exclamation-triangle"></i> Mật khẩu và xác nhận mật khẩu phải trùng nhau</div>
+                    }
+                    @if (Request.QueryString["notify"] != null && Request.QueryString["notify"] == "emailExists")
+                    {
+                        <div class="alert alert-danger"><i class="fas fa-exclamation-triangle"></i>Email này đã được sử dụng</div>
+                    }
+                </div>
+                <div class="login-content">
+                    <div class="login-logo">
+                        <a href="#">
+                            <h1>Đăng ký tài khoản</h1>
+                        </a>
+                    </div>
+                    <div class="login-form">
+                        <form action="" method="post">
+                            @Html.AntiForgeryToken()
+                            <div class="form-group">
+                                <label>Họ và tên:</label>
+                                <input class="au-input au-input--full" type="text" name="username" placeholder="Username" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Số điện thoại</label>
+                                <input class="au-input au-input--full" type="text" name="phone" value="(+84)" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Địa chỉ:</label>
+                                <input class="au-input au-input--full" type="text" name="address" placeholder="Address" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input class="au-input au-input--full" type="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input class="au-input au-input--full" type="password" name="password1" placeholder="Password" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm password</label>
+                                <input class="au-input au-input--full" type="password" name="password2" placeholder="Confirm password" required>
+                            </div>
+                            <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Đăng ký</button>
+                        </form>
+                        <div class="register-link">
+                            <p>
+                                Bạn cần trợ giúp?
+                                <a href="#">Liên hệ hỗ trợ kỹ thuật</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

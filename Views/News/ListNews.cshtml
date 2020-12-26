@@ -1,0 +1,128 @@
+﻿@{
+    Layout = "~/Views/Shared/_layoutTrong.cshtml";
+}
+@using TrangChuWebsite.Models
+@using PagedList.Mvc;
+@model PagedList.IPagedList<News>
+
+<style>
+
+    .ListNews {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        display: block;
+    }
+
+        .ListNews ul {
+            width: 100%;
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+
+            .ListNews ul li {
+                display: flex;
+                position: relative;
+                border-bottom: 1px solid #ebebeb;
+                margin-bottom: 30px;
+            }
+
+                .ListNews ul li a {
+                    text-decoration: none;
+                }
+
+                .ListNews ul li h3 {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: black;
+                }
+
+                    .ListNews ul li h3:hover {
+                        color: rgb(93, 126, 29);
+                    }
+
+                .ListNews ul li p {
+                    color: #667766;
+                }
+
+                .ListNews ul li img {
+                    width: 250px;
+                    height: 200px;
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+    .btn_detail {
+        display: inline;
+        padding: 5px 15px;
+        border-radius: 3px;
+        font-size: 18px;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+    }
+
+    .News-content {
+        padding-left: 20px;
+    }
+
+    .listTitle {
+        font-size: 22px;
+        background-color: #5c3d21;
+        padding: 5px 10px;
+        margin-bottom: 25px;
+        color: white;
+        border-radius: 5px 5px;
+    }
+   
+</style>
+<div class="home-content">
+    <div class="history">
+        <ul>
+            <li><a href="/Home">TRANG CHỦ /</a></li>
+            <li><a href="#"><span>&nbsp;DANH SÁCH TIN TỨC</span></a></li>
+        </ul>
+    </div>
+    <div class="listTitle">
+        Danh sách tin tức
+    </div>
+    <div class="ListNews">
+        <ul>
+            @foreach (News item in Model)
+            {
+                <li>
+                    <img src="~/Assets/Upload/News/@item.photo" class="News-img">
+                    <div class="News-content">
+                        <a href="/News/Detail/@item.id"><h3 class="">@item.name</h3></a>
+                        <a href="/News/Detail/@item.id"><p class="description">@Html.Raw(item.description)</p></a>
+                        <a href="/News/Detail/@item.id"><div class="btn_detail btn-success">Chi tiết</div></a>
+                    </div>
+                </li>
+            }
+        </ul>
+        @Html.PagedListPager(Model, page => Url.Action("ListNews", new { page }) )
+    </div>
+    <!-- New  -->
+    <!-- Dịch vụ  -->
+    <div class="dich-vu-title">
+        <p>CHÍNH SÁCH</p>
+        <hr>
+    </div>
+    <div class="dich-vu">
+        <div class="dich-vu-nd">
+            <img src="~/Assets/images/service1.jpg">
+            <div class="chinh-sach">
+                Chính sách vận chuyển<br>
+                <span>Miễn phí trong nội thành</span>
+            </div>
+        </div>
+        <div class="dich-vu-nd">
+            <img src="~/Assets/images/service2.jpg">
+            <div class="chinh-sach">
+                Chính sách thanh toán<br>
+                <span>Thanh toán online được giảm 2%</span>
+            </div>
+        </div>
+    </div>
+</div>

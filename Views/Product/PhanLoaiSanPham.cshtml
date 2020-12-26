@@ -1,0 +1,271 @@
+﻿@{
+    Layout = "~/Views/Shared/_layoutTrong.cshtml";
+}
+@using TrangChuWebsite.Models
+@using PagedList.Mvc;
+@using System.Data.SqlClient;
+@using System.Configuration;
+@using System.Data;
+
+@model PagedList.IPagedList<Product>
+@functions{
+    public DataContext db = new DataContext();
+    //lay gia da duoc sale
+    public string priceDiscount(double price, int discount)
+    {
+        double _price = price - (price * discount) / 100;
+        return _price.ToString();
+    }
+    //Ham lay san pham goi y
+    public List<Product> GetProduct()
+    {
+        List<Product> listFirst = db.Products.Where(tbl => tbl.hot == 1).OrderBy(tbl => tbl.id).Skip(0).Take(8).ToList();
+        return listFirst;
+    }
+
+    //Ham lay ra de muc phan loai san pham
+    public string GetCategories(int _id)
+    {
+        string StringConn = ConfigurationManager.ConnectionStrings["connection"].ToString();
+        DataTable dt = new DataTable();
+        using (SqlConnection conn = new SqlConnection(StringConn))
+        {
+            SqlCommand cmd = new SqlCommand("select * from Categories where id = @id", conn);
+            cmd.Parameters.AddWithValue("@id", _id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+        }
+        try
+        {
+            return dt.Rows[0]["tensanpham"].ToString();
+        }
+        catch
+        {
+            return "";
+        }
+    }
+}
+<div class="home-content">
+    <!-- History -->
+    <div class="history">
+        <ul>
+            <li><a href="/Home">TRANG CHỦ /</a></li>
+            <li><a href="#"><span>&nbsp;DANH MỤC</span></a></li>
+        </ul>
+        <div class="filt-price">
+            <label>(Giá) Từ: </label>
+            <input type="text" name="price_from" id="from" size="15" required />
+            <label>Đến: </label>
+            <input type="text" name="price_to" id="to" size="15" required />
+            <button class="btn btn-light" style="height: 30px; border: 1px solid #808080;" onclick="filt()">Lọc</button>
+        </div>
+        <div class="sort">
+            <label for="">Sắp xếp: </label>
+            @{
+                string _order = Request.QueryString["order"] != null ? Request.QueryString["order"] : "";
+
+            }
+            <select name="sort" id="sort" onchange="location.href = '/Product/PhanLoaiSanPham/@ViewBag.id?order=' + this.value;">
+                <option value="0">Sắp xếp</option>
+                <option @if (_order == "priceAsc") { <text> selected</text>} value="priceAsc">Giá tăng dần</option>
+                <option @if (_order == "priceDesc") { <text> selected</text>} value="priceDesc">Giá giảm dần</option>
+                <option @if (_order == "nameAsc") { <text> selected</text>} value="nameAsc">Sắp xếp A-Z</option>
+                <option @if (_order == "nameDesc") { <text> selected</text>} value="nameDesc">Sắp xếp Z-A</option>
+            </select>
+        </div>
+    </div>
+    <!-- history -->
+    <!-- Mục hai -->
+    <div class="trai-cay-moi-ngay">
+        <div class="tcmn-title">@GetCategories(Convert.ToInt32(ViewBag.id))</div>
+        <div class="tcmn-content">
+            <ul>
+                @foreach (Product item in Model)
+                {
+                    <li>
+                        <a href="/Product/ChiTietSanPham/@item.id"><img src="~/Assets/Upload/Products/@item.photo"></a>
+                        <a href="/Product/ChiTietSanPham/@item.id">
+                            <h1>@item.name</h1>
+                        </a>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h2>@item.price đ</h2>
+                        <p>@priceDiscount(item.price, item.discount) ₫</p>
+                        @if (Convert.ToInt32(item.discount) > 0)
+                        {
+                            <div class="sale">-@item.discount%</div>
+                        }
+                        <a href="/Product/AddWishlist/@item.id?customer_id=@Convert.ToInt32(this.Session["Customer_id"])" class="wishlist"><i class="far fa-heart"></i></a>
+                        <a href="/Cart/Add/@item.id"><div class="buy btn-primary">Mua hàng</div></a>
+                    </li>
+                }
+            </ul>
+        </div>
+        @Html.PagedListPager(Model, page => Url.Action("PhanLoaiSanPham", new { id = ViewBag.id, page }))
+    </div>
+    <div class="dich-vu-title">
+        <p>CHÍNH SÁCH</p>
+        <hr>
+    </div>
+    <div class="dich-vu">
+        <div class="dich-vu-nd">
+            <img src="~/Assets/images/service1.jpg">
+            <div class="chinh-sach">
+                Chính sách vận chuyển<br>
+                <span>Miễn phí trong nội thành</span>
+            </div>
+        </div>
+        <div class="dich-vu-nd">
+            <img src="~/Assets/images/service2.jpg">
+            <div class="chinh-sach">
+                Chính sách thanh toán<br>
+                <span>Thanh toán online được giảm 2%</span>
+            </div>
+        </div>
+    </div>
+    <div class="trai-cay-moi-ngay">
+        <div class="dich-vu-title">
+            <p>GỢI Ý CHO BẠN</p>
+            <hr>
+        </div>
+        <style>
+            .owl-carousel {
+                width: 1200px;
+                margin-top: 20px
+            }
+
+            .owl-item {
+                border: 1px solid #77778d !important;
+                border-radius: 10px;
+                text-align: center;
+                padding: 0px;
+                padding-top: 10px;
+                padding-bottom: 15px;
+            }
+
+                .owl-item img {
+                    width: 200px !important;
+                    height: 200px !important;
+                    margin: auto;
+                    object-fit: cover;
+                }
+
+                .owl-item h1 {
+                    margin: 15px 0px;
+                    padding: 0px;
+                    font-size: 18px;
+                    color: #ff5722;
+                    text-align: center;
+                }
+
+                .owl-item h2 {
+                    padding: 0px;
+                    margin: 0px;
+                    text-decoration: line-through;
+                    color: #77778d;
+                    font-size: 12px;
+                    font-style: italic;
+                    text-align: center;
+                    margin-top: 5px;
+                }
+
+                .owl-item p {
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #f99717;
+                    padding: 0px;
+                    margin: 0px;
+                    margin-top: 5px;
+                }
+
+                .owl-item .btn {
+                    margin: auto;
+                    margin-top: 10px;
+                }
+
+            .owl-stage-outer {
+                width: 100%;
+                position: relative;
+            }
+
+            .owl-next, .owl-prev {
+                position: absolute;
+                top: 45%;
+                z-index: 200;
+                font-size: 25px !important;
+                transform: translate(0%,-50%);
+            }
+
+            .owl-next {
+                right: 0px;
+                background-color: #f99717 !important;
+                color: white !important;
+            }
+
+            .owl-prev {
+                left: 0px;
+                background-color: #f99717 !important;
+                color: white !important;
+            }
+
+            .owl-item {
+                position: relative;
+            }
+
+                .owl-item .wishlist {
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    font-size: 18px;
+                    color: red;
+                }
+        </style>
+        <div class="owl-carousel owl-theme owl-loaded">
+            <div class="owl-stage-outer">
+                <div class="owl-stage">
+                    @{
+                        List<Product> hotProduct = GetProduct();
+                    }
+                    @foreach (Product item in hotProduct)
+                    {
+                        <div class="owl-item">
+                            <a href="/Product/ChiTietSanPham/@item.id"><img src="~/Assets/Upload/Products/@item.photo"></a>
+                            <a href="/Product/ChiTietSanPham/@item.id">
+                                <h1>@item.name</h1>
+                            </a>                            <h2>@item.price ₫</h2>
+                            <p>@priceDiscount(item.price, item.discount) ₫</p>
+                            <a href="/Product/AddWishlist/@item.id?customer_id=@Convert.ToInt32(this.Session["Customer_id"])" class="wishlist"><i class="far fa-heart"></i></a>
+                            <a href="/Cart/Add/@item.id" class="btn btn-primary">Mua hàng</a>
+                        </div>
+                    }
+
+                </div>
+            </div>
+            <div class="owl-nav">
+                <div class="owl-prev"><i class="fas fa-caret-left"></i></div>
+                <div class="owl-next"><i class="fas fa-caret-right"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Assets/js/jquery-3.5.1.js">
+</script>
+<script>
+    function filt(){
+        var _from = document.getElementById("from").value;
+        var _to = document.getElementById("to").value;
+        $.ajax({
+            url: "/Product/FilterPrice/@ViewBag.id?from=" + _from + "&to=" + _to,
+            success: function (result) {
+                $(".trai-cay-moi-ngay").empty();
+                $(".trai-cay-moi-ngay").append(result);
+            }
+        });
+    }
+</script>

@@ -1,0 +1,139 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayouChiTiet.cshtml";
+}
+@using PagedList;
+@model PagedList.IPagedList<Product>
+@using TrangChuWebsite.Models
+<style>
+    .giohang {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .giohang_title {
+        font-size: 18px;
+        margin-top: 25px;
+    }
+
+        .giohang_title span {
+            color: #999999;
+            font-size: 18px;
+        }
+
+    .giohang-left {
+        width: 880px;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 15px;
+    }
+
+        .giohang-left table {
+            width: 100%;
+        }
+
+    #cell-number {
+        width: 60px;
+        text-align: center;
+    }
+
+    .giohang-left table img {
+        width: 200px;
+        height: 170px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .giohang-left table tr {
+        border-bottom: 1px solid #ebebeb;
+    }
+
+        .giohang-left table tr th {
+            padding: 10px 10px;
+            background-color: #fef79c;
+        }
+
+        .giohang-left table tr td a {
+            font-size: 20px;
+            color: black;
+        }
+
+    .giohang-right {
+        width: 300px;
+        margin: 0px;
+        margin-top: 15px;
+    }
+
+    .vekhuyenmai {
+        padding-top: 10px;
+        padding-left: 10px;
+        background-color: #ebebeb;
+        padding-bottom: 15px;
+    }
+
+        .vekhuyenmai a {
+            text-decoration: none;
+        }
+
+    .giohang-right a {
+        text-decoration: none;
+    }
+
+    .list-product {
+        margin: 0px;
+        padding: 0px;
+    }
+
+        .list-product td {
+            padding-left: 10px;
+        }
+
+    .delete-product a {
+        color: #999999 !important;
+    }
+
+        .delete-product a:hover {
+            color: black !important;
+        }
+
+    .btn {
+        margin-top: 15px;
+    }
+</style>
+<div class="home-content">
+    <h3 class="giohang_title"><i class="far fa-heart"></i> SẢN PHẨM ƯA THÍCH <span>(có @Model.Count() sản phẩm)</span></h3>
+    <div class="giohang">
+        <div class="giohang-left">
+            <!-- drop-box -->
+            <form action="/Cart/Update" method="post">
+                <div class="san-pham-duoc-them">
+                    <table class="list-product">
+                        <tr>
+                            <th>Hình ảnh</th>
+                            <th>Tên hàng</th>
+                            <th>Đơn giá</th>
+                            <th>Thêm vào giỏ hàng</th>
+                            <th> </th>
+                        </tr>
+                        @foreach (Product item in Model)
+                        {
+
+                            <tr>
+                                <td><img src="~/Assets/Upload/Products/@item.photo" alt=""></td>
+                                <td><a href="/Product/ChiTietSanPham/@item.id">@item.name</a></td>
+                                <td>@item.price đ</td>
+                                <td><a href="/Cart/Add/@item.id" class="btn btn-primary" style="font-size: 16px; margin: 0px; margin-left:25px;"><i class="fas fa-cart-plus"></i></a></td>
+                                <td valign="top" class="delete-product"><a href="/Product/DeleteWishlist/@item.id?customer_id=@Convert.ToInt32(this.Session["Customer_id"])"><i class="fas fa-times"></i></a></td>
+                            </tr>
+                        }
+                    </table>
+                    <a href="/Cart/Clear"><div class="btn btn-primary">Xóa toàn bộ</div></a>
+                </div>
+            </form>
+            <!-- end drop box -->
+        </div>
+        <div class="giohang-right">
+
+        </div>
+    </div>
+</div>
+

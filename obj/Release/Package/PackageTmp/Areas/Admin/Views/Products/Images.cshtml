@@ -1,0 +1,115 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@* Lay ra DataContext db.Categories *@
+@using TrangChuWebsite.Models
+<style>
+    .user-content {
+        margin: 0px;
+        padding: 0px;
+        margin-top: 15px;
+    }
+
+        .user-content table {
+            margin: 0px auto;
+            margin-top: 15px;
+            background: white;
+            width: 95%;
+        }
+
+            .user-content table tr {
+                height: 50px;
+                line-height: 50px;
+            }
+
+                .user-content table tr td {
+                    font-size: 18px;
+                    color: black;
+                }
+
+    td {
+        padding-left: 25px;
+    }
+
+        td i {
+            cursor: pointer;
+        }
+
+        td img {
+            width: 120px;
+            margin: 0px;
+            padding: 0px;
+        }
+        td a {
+            font-size: 14px;
+            padding: 5px 5px;
+        }
+
+            td a:hover {
+                text-decoration: underline;
+            }
+    th {
+        color: antiquewhite;
+        font-weight: 400;
+        padding-left: 25px;
+    }
+
+    .pagination {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+        .pagination li {
+            width: 38px;
+            height: 38px;
+            text-align: center;
+            line-height: 38px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            margin-right: 5px;
+            background-color: white;
+        }
+
+    .btn_add {
+        border-radius: 8px;
+        background-color: #333;
+        padding: 10px 0px;
+        text-align: center;
+        width: 160px;
+    }
+
+        .btn_add a {
+            text-decoration: none;
+            color: antiquewhite;
+        }
+
+    .hang:hover td {
+        background-color: #f5f5f5;
+    }
+</style>
+<div class="user-content">
+    <div style="width: 95%; margin: auto; display: flex;">
+        <div class="btn_add"><a href="/Admin/Products/CreateImages?product_id=@ViewBag.product_id">Add Images</a></div>
+        <div class="btn_add" style="margin-left: 20px;"><a href="/Admin/Products/Read">Back to Product</a></div>
+    </div>
+    <table border="0" cellpadding="5">
+        <tr align="left" style="background: #333;">
+            <th>Image</th>
+            <th> </th>
+        </tr>
+        <!-- phan co so du leu -->
+        @foreach (Image item in Model)
+        {
+            <tr align="left" class="hang">
+                <td><img src="~/Assets/Upload/Products/Images/@item.photo"/></td>
+                <td width="160">
+                    <a href="/Admin/Products/ChangeImages/@item.id?product_id=@ViewBag.product_id">Change</a>
+                    <a href="/Admin/Products/DeleteIamge/@item.id?product_id=@ViewBag.product_id" onclick="return window.confirm('Bạn muốn xóa mặt hàng này?');">Delete
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+
+

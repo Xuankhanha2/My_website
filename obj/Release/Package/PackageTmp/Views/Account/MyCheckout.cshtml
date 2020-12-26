@@ -1,0 +1,76 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutTrong.cshtml";
+}
+@using PagedList.Mvc;
+@using PagedList;
+@using TrangChuWebsite.Models;
+@model IPagedList<Order>
+@functions{
+    public DataContext db = new DataContext();
+
+    public string GetNameProduct(int order_id)
+    {
+        List<OrdersDetail> list = db.OrdersDetails.Where(tbl => tbl.order_id == order_id).ToList();
+        string name = "";
+        int i = 0;
+        foreach(OrdersDetail item in list)
+        {
+            Product product = db.Products.Where(tbl => tbl.id == item.product_id).FirstOrDefault();
+            if(i == 0)
+            {
+                name = product.name;
+            }
+            else
+            {
+                name = name + ", " + product.name;
+            }
+            i++;
+        }
+        return name;
+    }
+    public int TotalPrice(int order_id)
+    {
+        int total = 0;
+        List<OrdersDetail> list = db.OrdersDetails.Where(tbl => tbl.order_id == order_id).ToList();
+        foreach (OrdersDetail item in list)
+        {
+            total += (int)(item.quantity * item.price);
+        }
+        return total;
+    }
+}
+<div class="home-content" style="min-height: 500px;">
+    <div class="page-content">
+        <div class="mini_menu">
+            <ul>
+                <a href="#"><li><span><i class="fas fa-user"></i></span> Thông tin tài khoản</li></a>
+                <a href="#"><li><span><i class="fas fa-clipboard-list"></i></span> Đơn hàng của tôi</li></a>
+                <a href="#"><li><span><i class="fas fa-bell"></i></span> Thông báo</li></a>
+            </ul>
+        </div>
+        <div class="customer_infor">
+            <div class="page-title">Đơn hàng của tôi</div>
+            <div class="list_order">
+                <table border="0">
+                    <tr>
+                        <th>Mã đơn</th>
+                        <th>Ngày mua</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Tổng tiền</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                @foreach (Order item in Model)
+                {
+                    <tr class="tb-row">
+                        <td><a href="#">@item.id</a></td>
+                        <td>@item.date</td>
+                        <td>@GetNameProduct(item.id)</td>
+                        <td>@TotalPrice(item.id)</td>
+                        <td>@if (item.status == 0) {<text>Đang giao hàng</text>}else{<text>Đã giao hàng</text>}</td>
+                    </tr>
+                }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

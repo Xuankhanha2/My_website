@@ -1,0 +1,133 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@* Lay ra DataContext db.Categories *@
+@using TrangChuWebsite.Models
+@using PagedList.Mvc
+@* Lay duoc Model list ra de dua vao trang nay *@
+@model PagedList.IPagedList<Category>
+
+@functions{
+    public DataContext db = new DataContext();
+    public List<Category> setSubList(int id)
+    {
+        int _id = id;
+        List<Category> SubList = db.Categories.Where(anhxa => anhxa.parent_id == _id).ToList();
+        return SubList != null ? SubList : new List<Category>();
+    }
+}
+<style>
+    .user-content {
+        margin: 0px;
+        padding: 0px;
+        margin-top: 15px;
+    }
+
+        .user-content table {
+            margin: 0px auto;
+            margin-top: 15px;
+            background: white;
+            width: 95%;
+        }
+
+            .user-content table tr {
+                height: 50px;
+                line-height: 50px;
+            }
+
+                .user-content table tr td {
+                    font-size: 18px;
+                    color: black;
+                }
+
+    td {
+        padding-left: 25px;
+    }
+
+        td i {
+            cursor: pointer;
+        }
+        td a {
+            font-size: 14px;
+            padding: 5px 5px;
+        }
+
+            td a:hover {
+                text-decoration: underline;
+            }
+    th {
+        color: antiquewhite;
+        font-weight: 400;
+        padding-left: 25px;
+    }
+
+    .pagination {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+        .pagination li {
+            width: 38px;
+            height: 38px;
+            text-align: center;
+            line-height: 38px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            margin-right: 5px;
+            background-color: white;
+        }
+
+    .btn_add {
+        border-radius: 8px;
+        background-color: #333;
+        padding: 10px 0px;
+        text-align: center;
+        width: 160px;
+    }
+
+        .btn_add a {
+            text-decoration: none;
+            color: antiquewhite;
+        }
+
+    .hang:hover td {
+        background-color: #f5f5f5;
+    }
+</style>
+<div class="user-content">
+    <div style="width: 95%; margin: auto;">
+        <div class="btn_add"><a href="/Admin/Category/Create">Add Category</a></div>
+    </div>
+    <table border="0" cellpadding="5">
+        <tr align="left" style="background: #333;">
+            @*<th>id</th>*@
+            <th>Tên sản phẩm</th>
+            <th> </th>
+        </tr>
+        <!-- phan co so du leu -->
+        @foreach (Category item in Model)
+        {
+            <tr align="left" class="hang">
+                @*<td>@item.id</td>*@
+                <td>@item.tensanpham</td>
+                <td width="180px">
+                    <a href="/Admin/Category/Edit/@item.id">Edit</a>
+                    <a href="/Admin/Category/Delete/@item.id" onclick="return window.confirm('Bạn muốn xóa Category này?');">Delete</a>
+                </td>
+            </tr>
+            List<Category> record = setSubList(item.id);
+            foreach (Category subitem in record)
+            {
+                <tr align="left" class="hang">
+                    @*<td>@item.id</td>*@
+                    <td style="padding-left: 100px;">@subitem.tensanpham</td>
+                    <td width="180px">
+                        <a href="/Admin/Category/Edit/@subitem.id">Edit</a>
+                        <a href="/Admin/Category/Delete/@subitem.id" onclick="return window.confirm('Bạn muốn xóa Category này?');">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+    @Html.PagedListPager(Model, page => Url.Action("Read", new { page }))
+</div>

@@ -1,0 +1,362 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayouChiTiet.cshtml";
+}
+@using TrangChuWebsite.Models;
+@using System.Data;
+@using System.Data.SqlClient;
+@using System.Configuration;
+@functions{
+    public DataContext db = new DataContext();
+    public List<Category> GetCategories()
+    {
+        List<Category> listRecord = db.Categories.Where(tbl => tbl.parent_id == 0).ToList();
+        return listRecord;
+    }
+    //Ham lay danh sach anh con cua san pham
+    public DataTable GetListImage(int id)
+    {
+        int _id = id;
+        string StringConn = ConfigurationManager.ConnectionStrings["connection"].ToString();
+        DataTable dt = new DataTable();
+        Image a = new Image();
+        List<Image> list = new List<Image>();
+        using (SqlConnection conn = new SqlConnection(StringConn))
+        {
+            SqlCommand cmd = new SqlCommand("select * from Images where product_id = @id", conn);
+            cmd.Parameters.AddWithValue("@id", _id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+        }
+        return dt;
+    }
+
+    // Ham lay ra ten cua khach hang
+    public string CustomerName(int id)
+    {
+
+        Customer record = db.Customers.Where(tbl => tbl.id == id).FirstOrDefault();
+        string _name = record.name;
+        return _name;
+    }
+
+    public List<Rating> listRating(int id)
+    {
+        List<Rating> list = db.Ratings.Where(tbl => tbl.product_id == id).ToList();
+        return list;
+    }
+
+    //Lay ra san pham noi bat
+    public List<Product> GetHotProduct(int id)
+    {
+        List<Product> list = db.Products.Where(tbl => tbl.id != id && tbl.hot == 1).Take(5).ToList();
+        return list;
+    }
+    //Dem so luong danh gia tren 1 san pham
+    public int totalRating(int id)
+    {
+        List<Rating> list = db.Ratings.Where(tbl => tbl.product_id == id).ToList();
+        int count = list.Count();
+        return count;
+    }
+    // Dem so luong star
+    public int numbStar(int id, int star)
+    {
+        List<Rating> list = db.Ratings.Where(tbl => tbl.product_id == id && tbl.star == star).ToList();
+        int count = list.Count();
+        return count;
+    }
+    public double ratingPercent(int id, int star)
+    {
+        int all = totalRating(id);
+        int s = numbStar(id, star);
+        double percent = 0;
+        if (all == 0)
+        {
+            return 0;
+        }
+        else
+        {
+            percent = (double)100 * s / all;
+            return percent;
+        }
+    }
+    //lay diem trung binh cho danh gia
+    public double Score(int id)
+    {
+        int all = totalRating(id);
+        if (all != 0)
+        {
+            double score = (double)(5 * numbStar(id, 5) + 4 * numbStar(id, 4) + 3 * numbStar(id, 3) + 2 * numbStar(id, 2) + 1 * numbStar(id, 1)) / all;
+            return score;
+
+        }
+        else
+        {
+            return 0;
+        }
+    }
+}
+<div class="home-content">
+    <!-- History -->
+    <div class="history">
+        <ul>
+            <li><a href="/Home/Index">TRANG CHỦ /</a></li>
+            <li><a href="/Product/Index">&nbsp;DANH MỤC /</a></li>
+            <li><a href="#"><span>&nbsp;SẢN PHẨM</span></a></li>
+        </ul>
+    </div>
+    <!-- history -->
+    <!-- Mục hai -->
+    <!-- chi tiet san pham -->
+    <div class="chi-tiet-sp">
+        <!-- khoi trai -->
+        <div class="ctsp-left">
+            <div class="anh-sp">
+                <div class="anh-chinh">
+                    <img src="~/Assets/Upload/Products/@Model.photo" id="anh-chinh" alt="">
+                </div>
+                <div class="anh-con">
+                    <ul>
+                        @{
+                            DataTable record = GetListImage(Model.id);
+                            int i = 1;
+                        }
+                        @foreach (DataRow item in record.Rows)
+                        {
+                            string img = "image" + i.ToString();
+                            <li><img id="@img" src="~/Assets/Upload/Products/Images/@item["photo"]" alt=""></li>
+                            i++;
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /Khoi trai -->
+        <!-- Khoi phai -->
+        <div class="ctsp-right">
+            <form action="/Cart/Add/@Model.id">
+                <div class="thongtin-sp">
+                    <h1>@Model.name</h1>
+                    <div class="sao">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h2>@Model.price<sup>₫</sup></h2>
+                    <div class="detail" style="min-height: 70px">
+                        @Html.Raw(Model.description)
+                    </div>
+                    <div>
+                        <a href="/Product/AddWishlist/@Model.id?customer_id=@Convert.ToInt32(this.Session["Customer_id"])" style="text-decoration: none !important;"><i class="far fa-heart"></i> Add Wishlist</a>
+                    </div>
+                    <div class="tinh-trang">
+                        Tình trạng:
+                        @if (Convert.ToInt32(Model.content) == 1)
+                        {
+                            <span>còn hàng <i class="far fa-check-circle"></i></span>
+                        }
+                        else
+                        {
+                            <span style="color: red !important;">Hết hàng <i class="far fa-times-circle"></i></span>
+                        }
+                    </div>
+                    <div class="so-luong">
+                        <input type="button" id="btn-tru" value="-">
+                        <input type="text" name="number" id="soluong" value="1" size="1">
+                        <input type="button" id="btn-cong" value="+">
+                    </div>
+                    <a href="$" style="text-decoration: none;"><input type="submit" class="btn btn-block btn-success" style="font-size: 20px" value="Mua hàng"></a>
+                </div>
+            </form>
+            <div class="sub-page">
+                <div class="tu-khoa">từ khóa: <a href="#">hoa quả</a></div>
+                <div class="page">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="far fa-envelope"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-invision"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- /khoi phai -->
+        <!-- Phan mo rong -->
+        <div class="mo-rong">
+            <!-- catogory -->
+            <div class="catogory">
+                <div class="catogory-title">
+                    <i class="fas fa-carrot"></i> DANH MỤC SẢN PHẨM
+                </div>
+                <div class="catogory-content">
+                    <ul>
+                        @{
+                            List<Category> list = GetCategories();
+                        }
+                        @foreach (Category item in list)
+                        {
+                            <li><a href="/Product/PhanLoaiSanPham/@item.id"><i class="fab fa-envira"></i> @item.tensanpham</a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <!-- /catogory -->
+            <!-- quang cao -->
+            <div class="adv">
+                <div class="catogory-title">
+                    <i class="fas fa-carrot"></i> QUẢNG CÁO
+                </div>
+                <div class="owl-carousel owl-theme">
+                    <div class="item"><h4><img src="~/Assets/images/adv1.jpg"></h4></div>
+                    <div class="item"><h4><img src="~/Assets/images/adv2.jpg"></h4></div>
+                    <div class="item"><h4><img src="~/Assets/images/adv3.jpg"></h4></div>
+                    <div class="item"><h4><img src="~/Assets/images/adv4.jpg"></h4></div>
+                </div>
+            </div>
+            <!-- /quang cao -->
+        </div>
+        <!-- /Phan mo rong -->
+    </div>
+    <!-- end noi dung chi tiet san pham -->
+    <!-- Mo ta - danh gia san pham -->
+    <div class="noidung-bottom">
+        <div class="mota-danhgia">
+            <div class="mota">
+                <div class="mota-title">Mô tả</div>
+                <div class="mota-content">
+                    Giá trị dinh dưỡng:   Nho tươi cung cấp các chất dinh dưỡng,
+                    làm giảm mệt nhọc ngay lập tức. Các nghiên cứu cho thấy Nho tươi
+                    có chứa vitamin A, C, Calcium và sắt giúp duy trì sức khỏe,
+                    tốt cho tim mạch, ngăn ngừa tiến trình bệnh tiểu đường.
+                    Cũng như Táo, Nho của Mỹ, Úc… đều được bảo quản trong môi
+                    trường lạnh đặc biệt từ khi hái, không chất bảo quản và các
+                    chất gây hại cho sức khỏe.
+                </div>
+            </div>
+            <!-- danh gia -->
+            <div class="mota-title">Đánh giá</div>
+            <form action="/Product/Rating/@Model.id" method="post">
+                @Html.AntiForgeryToken()
+                <div class="danhgia">
+                    <div class="danhgia-title">Đánh giá cho Nho đỏ không hạt Úc</div>
+                    <div class="danhgia-content">
+                        <div class="curent-score">
+                            <span>@Score(Model.id).ToString("0.00") </span>
+                            <i class="fas fa-star star-color"></i>
+                            <i class="fas fa-star star-color"></i>
+                            <i class="fas fa-star star-color"></i>
+                            <i class="fas fa-star star-color"></i>
+                            <i class="fas fa-star star-color"></i>
+                        </div>
+                        <ul>
+                            <li>
+                                <span>5</span><i class="fas fa-star"></i><div class="thanh-phan-tram"><div class="phan-tram" style="width: @ratingPercent(Model.id, 5)%"> </div></div>
+                                <label for="">@ratingPercent(Model.id, 5).ToString("0.00")% | @numbStar(Model.id, 5) Đánh giá</label>
+                            </li>
+                            <li>
+                                <span>4</span><i class="fas fa-star"></i><div class="thanh-phan-tram"><div class="phan-tram" style="width: @ratingPercent(Model.id, 4)%"> </div></div>
+                                <label for="">@ratingPercent(Model.id, 4).ToString("0.00")% | @numbStar(Model.id, 4) Đánh giá</label>
+                            </li>
+                            <li>
+                                <span>3</span><i class="fas fa-star"></i><div class="thanh-phan-tram"><div class="phan-tram" style="width: @ratingPercent(Model.id, 3)%"> </div></div>
+                                <label for="">@ratingPercent(Model.id, 3).ToString("0.00")% | @numbStar(Model.id, 3) Đánh giá</label>
+                            </li>
+                            <li>
+                                <span>2</span><i class="fas fa-star"></i><div class="thanh-phan-tram"><div class="phan-tram" style="width: @ratingPercent(Model.id, 2)%"> </div></div>
+                                <label for="">@ratingPercent(Model.id, 2).ToString("0.00")% | @numbStar(Model.id, 2) Đánh giá</label>
+                            </li>
+                            <li>
+                                <span>1</span><i class="fas fa-star"></i><div class="thanh-phan-tram"><div class="phan-tram" style="width: @ratingPercent(Model.id, 1)%"> </div></div>
+                                <label for="">@ratingPercent(Model.id, 1).ToString("0.00")% | @numbStar(Model.id, 1) Đánh giá</label>
+                            </li>
+                        </ul>
+                        <div class="btn-danhgia bg-primary"><a href="#move-rating">Đánh giá ngay</a></div>
+                    </div>
+
+                    <div class="form-danhgia">
+                        <!-- <input type="textarea" row id="txtbox" placeholder="viết đánh giá..."> -->
+                        <div class="danhgia-sao">
+                            <h2>Bạn đánh giá sản phẩm này bao nhiêu sao?</h2>
+                            <p id="move-rating">
+                                <i class="fas fa-star" id="star1"></i>
+                                <i class="fas fa-star" id="star2"></i>
+                                <i class="fas fa-star" id="star3"></i>
+                                <i class="fas fa-star" id="star4"></i>
+                                <i class="fas fa-star" id="star5"></i>
+                            </p>
+                        </div>
+                        <input type="number" name="star" id="numb_star" style="display: none;" value="0" />
+                        <textarea name="content" id="txtbox" cols="70" rows="10" placeholder="viết đánh giá..."></textarea>
+                        <button class="btn-gui">Gửi đánh giá</button>
+                    </div>
+
+                    <div class="danhgia-title" style="margin-top: 30px; margin-bottom: 5px;">Một số đánh giá của khách hàng</div>
+                    <div class="list-rating">
+                        @{
+                            List<Rating> getListRating = listRating(Model.id);
+                        }
+                        @foreach (Rating item in getListRating)
+                        {
+                            <div class="rating-line">
+                                <div class="user-infor">
+                                    <div class="avatar"><img src="~/Assets/images/avatar-placeholder.png" alt=""></div>
+                                    <div class="rating-content">
+                                        <a href="#"><h3>@CustomerName(item.customer_id)</h3></a>
+
+                                        <h4>
+                                            <i class="fas fa-star" style="@if (item.star >= 1) {<text>color: #fe9727 !important;</text>}"></i>
+                                            <i class="fas fa-star" style="@if (item.star >= 2) {<text>color: #fe9727 !important;</text>}"></i>
+                                            <i class="fas fa-star" style="@if (item.star >= 3) {<text>color: #fe9727 !important;</text>}"></i>
+                                            <i class="fas fa-star" style="@if (item.star >= 4) {<text>color: #fe9727 !important;</text>}"></i>
+                                            <i class="fas fa-star" style="@if (item.star >= 5) {<text>color: #fe9727 !important;</text>}"></i>
+                                        </h4>
+
+                                        <p>@item.content</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+
+
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <!-- san pham noi bat -->
+        <div class="sp-noibat">
+            <div class="catogory-title">
+                <i class="fas fa-carrot"></i> SẢN PHẨM NỔI BẬT
+            </div>
+            <div class="sp-noibat-content">
+                <ul>
+                    @{
+                        List<Product> hotProduct = GetHotProduct(Model.id);
+                    }
+                    @foreach (Product item in hotProduct)
+                    {
+                        <li>
+                            <img src="~/Assets/Upload/Products/@item.photo">
+                            <div class="sp-noibat-content-right">
+                                <p><a href="/Product/ChiTietSanPham/@item.id">@item.name</a></p>
+                                <h3>@item.price<sup>₫</sup></h3>
+                                <h4>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </h4>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end Mo ta - danh gia san pham -->
+    <!-- chi tiet san pham -->
+</div>
+<script src="~/Assets/js/jquery-3.5.1.js"></script>

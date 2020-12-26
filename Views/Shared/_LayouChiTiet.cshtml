@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh food</title>
+    <link rel="stylesheet" href="~/Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Assets/css/style3.css">
+    <script src="https://kit.fontawesome.com/d5331f594f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/Assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Assets/css/owl.theme.default.min.css">
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+</head>
+<body>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5fa76e548e1c140c2abbd435/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <div class="wrapper">
+
+        <!-- header -->
+        @Html.Partial("~/Views/Shared/Header.cshtml")
+        <!-- /header -->
+        <!-- banner -->
+        @Html.Partial("~/Views/Shared/Banner.cshtml")
+        <!-- /banner -->
+        <!-- Main-menu -->
+        @Html.Partial("~/Views/Shared/Menu.cshtml")
+        <!-- /Main-menu -->
+        <!-- home content -->
+        @RenderBody()
+        <!-- /home content -->
+        <!-- footer -->
+        @Html.Partial("~/Views/Shared/Footer.cshtml")
+        <!-- /footer -->
+    </div>
+</body>
+</html>
+<script src="~/Assets/js/javascript3.js"></script>
+<script src="~/Assets/js/owl.carousel.min.js"></script>

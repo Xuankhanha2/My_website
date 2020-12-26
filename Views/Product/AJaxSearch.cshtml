@@ -1,0 +1,13 @@
+﻿@{
+    Layout = null;
+}
+@foreach (var item in Model)
+{
+    <li>
+        <a href="/Product/ChiTietSanPham/@item.id">
+            <img src="~/Assets/Upload/Products/@item.photo" style="margin-right: 5px;" />
+        </a>
+        <a href="/Product/ChiTietSanPham/@item.id">@item.name</a>
+    </li>
+}
+

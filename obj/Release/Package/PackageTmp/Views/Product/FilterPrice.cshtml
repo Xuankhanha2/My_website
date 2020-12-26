@@ -1,0 +1,77 @@
+﻿@{
+    Layout = "~/Views/Shared/_layoutTrong.cshtml";
+}
+@using TrangChuWebsite.Models
+@using PagedList.Mvc;
+@using System.Data.SqlClient;
+@using System.Configuration;
+@using System.Data;
+
+@model PagedList.IPagedList<Product>
+@functions{
+    //lay gia da duoc sale
+    public string priceDiscount(double price, int discount)
+    {
+        double _price = price - (price * discount) / 100;
+        return _price.ToString();
+    }
+
+    //Ham lay ra de muc phan loai san pham
+    public string GetCategories(int _id)
+    {
+        string StringConn = ConfigurationManager.ConnectionStrings["connection"].ToString();
+        DataTable dt = new DataTable();
+        using (SqlConnection conn = new SqlConnection(StringConn))
+        {
+            SqlCommand cmd = new SqlCommand("select * from Categories where id = @id", conn);
+            cmd.Parameters.AddWithValue("@id", _id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+        }
+        try
+        {
+            return dt.Rows[0]["tensanpham"].ToString();
+        }
+        catch
+        {
+            return "";
+        }
+    }
+}
+<div class="home-content" style="min-height: 300px">
+    <!-- Mục hai -->
+   
+
+    <div class="trai-cay-moi-ngay">
+        <div class="tcmn-title">@GetCategories(Convert.ToInt32(ViewBag.id))</div>
+        <div style="margin-top: 15px"><a href="/Product/PhanLoaiSanPham/@ViewBag.id"> << Back  </a></div>
+        <div class="tcmn-content">
+            @if (ViewBag.result == "noResult")
+            {
+                <h1>Không có kết quả!</h1>
+            }
+            <ul>
+                @foreach (Product item in Model)
+                {
+                    <li>
+                        <a href="/Product/ChiTietSanPham/@item.id"><img src="~/Assets/Upload/Products/@item.photo"></a>
+                        <a href="/Product/ChiTietSanPham/@item.id">
+                            <h1>@item.name</h1>
+                        </a>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h2>@item.price đ</h2>
+                        <p>@priceDiscount(item.price, item.discount) đ</p>
+                        <a href="/Cart/Add/@item.id"><div class="buy btn-primary">Mua hàng</div></a>
+                    </li>
+                }
+            </ul>
+        </div>
+        @Html.PagedListPager(Model, page => Url.Action("FilterPrice", new { id = ViewBag.id, page }))
+    </div>
+</div>

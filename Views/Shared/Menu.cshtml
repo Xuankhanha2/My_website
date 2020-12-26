@@ -1,0 +1,112 @@
+﻿@using TrangChuWebsite.Models;
+@functions{
+    DataContext db = new DataContext();
+    public List<Category> GetCategories()
+    {
+        List<Category> listRecord = db.Categories.Where(tbl => tbl.parent_id == 0).ToList();
+        return listRecord;
+    }
+}
+
+<script>
+    function Search() {
+        var _key = document.getElementById("key").value
+        location.href = "/Product/Search?key=" + _key
+    }
+</script>
+
+<div class="main-menu">
+    <div class="menu-content">
+        <div class="menu-left">
+            <ul>
+                <li><a href="/Home">Trang chủ</a></li>
+                <li>
+                    <a href="/Product/Index">Sản phẩm</a>
+                    <ul>
+                        @{
+                            List<Category> list = GetCategories();
+                        }
+                        @foreach (Category item in list)
+                        {
+                            <li><a href="/Product/PhanLoaiSanPham/@item.id">@item.tensanpham</a></li>
+                        }
+                    </ul>
+                </li>
+                <li><a href="#">Nhà cung cấp</a></li>
+                <li><a href="/News/listNews">Tin tức</a></li>
+                @*<li><a href="#">Giới thiệu</a></li>*@
+                <li><a href="/Home/Contact">Liên hệ</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <div class="search-bg" style="position: relative">
+                <input type="text" name="search" id="key" placeholder="Tìm kiếm..." onkeyup="searchForm();" autocomplete="off">
+                <i class="fas fa-search" style="color: black; cursor: pointer" onclick="Search();"></i>
+                <div id="smart-search">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <style>
+            #smart-search {
+                position: absolute;
+                width: 100%;
+                background: white;
+                margin: 0px auto;
+                top: 40px;
+                left: 0px;
+                z-index: 1000;
+                display: none;
+            }
+
+                #smart-search img {
+                    width: 70px;
+                }
+
+                #smart-search ul {
+                    padding: 0px;
+                    margin: 0px;
+                    list-style: none;
+                }
+
+                    #smart-search ul li {
+                        padding: 0px;
+                        margin: 0px;
+                        margin-bottom: 5px;
+                        display: flex;
+                        text-align: left;
+                        padding: 10px 5px;
+                    }
+        </style>
+    </div>
+</div>
+<script>
+    function searchForm() {
+        $(document).ready(function () {
+            $(window).click(function () {
+                $("#smart-search").attr("style", "display: none !important;");
+            })
+        })
+        var _key = document.getElementById('key').value;
+
+        if (_key != "") {
+            document.getElementById("smart-search").setAttribute("style", "display: block;");
+            //-----Ajax
+            $.ajax({
+                url: "/Product/AJaxSearch?key=" + _key,
+                success: function (result) {
+                    //alert(result);
+                    //clear cac the li trong smart search
+                    $("#smart-search ul").empty();
+                    //them ket qua tim kiem
+                    $("#smart-search ul").append(result);
+                }
+            });
+            //------
+        }
+        else {
+            document.getElementById("smart-search").setAttribute("style", "display: none;");
+        }
+    }
+</script>

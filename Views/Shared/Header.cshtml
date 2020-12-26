@@ -1,0 +1,44 @@
+﻿<header class="header">
+    <div class="header-content">
+        <div class="header-left">
+            <ul>
+                <li>
+                    <i class="fas fa-mobile-alt"></i>
+                    <a href="#" class="hotline">Hotline: 0985.334.786</a>
+                </li>
+                <li>
+                    <i class="far fa-envelope"></i>
+                    <a href="#" class="email">Email: freshfood24@gmail.com</a>
+                </li>
+                <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="#" class="diachi">Địa chỉ: Hà Nội</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /header left -->
+        <div class="header-right">
+            @if (this.Session["Customer_email"] == null)
+            {
+                <ul>
+                    <li><a href="/Account/Login">Đăng nhập</a></li>
+                    <li><a href="/Account/Register">Đăng ký</a></li>
+                </ul>
+            }
+            else
+            {
+                <ul>
+                    <li><a href="/">Xin chào: <i class="fas fa-user-circle"></i> @this.Session["Customer_name"]</a>
+                        <ul class="sub-account-option">
+                            <li><a href="/Account/AccountInfor/@Convert.ToInt32(this.Session["Customer_id"])"><i class="fas fa-user-edit"></i> Thông tin tài khoản</a></li>
+                            <li><a href="/Product/Wishlist/@Convert.ToInt32(this.Session["Customer_id"])"><i class="far fa-heart"></i> Sản phẩm ưa thích</a></li>
+                            <li><a href="/Account/Logout"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
+                        </ul>
+                    </li> 
+                </ul>
+            }
+
+        </div>
+        <!-- /header-right -->
+    </div>
+</header>

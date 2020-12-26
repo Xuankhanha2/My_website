@@ -1,0 +1,192 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayouChiTiet.cshtml";
+}
+@functions{ 
+    public int number()
+    {
+        List<CartItem> list = new List<CartItem>();
+        list = this.Session["Cart"] as List<CartItem>;
+        return list.Count();
+    }
+}
+@using TrangChuWebsite.Models
+<style>
+    .giohang {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .giohang_title {
+        font-size: 18px;
+        margin-top: 25px;
+    }
+
+        .giohang_title span {
+            color: #999999;
+            font-size: 18px;
+        }
+
+    .giohang-left {
+        width: 880px;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 15px;
+    }
+
+        .giohang-left table {
+            width: 100%;
+        }
+
+    #cell-number {
+        width: 60px;
+        text-align: center;
+    }
+
+    .giohang-left table img {
+        width: 200px;
+        height: 170px;
+        object-fit: cover;
+        object-position: center;
+    }
+    .giohang-left table tr{
+        border-bottom: 1px solid #ebebeb;
+    }
+    .giohang-left table tr th {
+        padding: 10px 10px;
+        background-color: #fef79c;
+    }
+
+    .giohang-left table tr td a {
+        font-size: 20px;
+        color: black;
+    }
+
+    .giohang-right {
+        width: 300px;
+        margin: 0px;
+        margin-top: 15px;
+    }
+
+    .vekhuyenmai {
+        padding-top: 10px;
+        padding-left: 10px;
+        background-color: #ebebeb;
+        padding-bottom: 15px;
+    }
+
+        .vekhuyenmai a {
+            text-decoration: none;
+        }
+
+    .tongtien {
+        margin-top: 15px;
+        background-color: #ebebeb;
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+        .tongtien h4 {
+            font-size: 18px;
+            color: #474242;
+            padding: 0px;
+            margin: 10px 0px;
+        }
+
+    .khuvuc {
+        padding-left: 50px;
+    }
+
+    .tongtien span {
+        font-size: 25px;
+        color: red;
+    }
+
+    .thanhtoan {
+        text-align: center;
+        padding: 10px 0px;
+        border-radius: 5px;
+        margin-top: 15px;
+        font-size: 20px;
+    }
+
+    .giohang-right a {
+        text-decoration: none;
+    }
+
+    .list-product {
+        margin: 0px;
+        padding: 0px;
+    }
+
+        .list-product td {
+            padding-left: 10px;
+        }
+
+    .delete-product a {
+        color: #999999 !important;
+    }
+
+        .delete-product a:hover {
+            color: black !important;
+        }
+    .btn{
+        margin-top: 15px;
+    }
+</style>
+<div class="home-content">
+    <h3 class="giohang_title"><i class="fas fa-shopping-cart"></i> GIỎ HÀNG <span>(có @number() sản phẩm)</span></h3>
+    <div class="giohang">
+        <div class="giohang-left">
+            <!-- drop-box -->
+            <form action="/Cart/Update" method="post">
+                <div class="san-pham-duoc-them">
+                    <table class="list-product">
+                        <tr>
+                            <th>Hình ảnh</th>
+                            <th>Tên hàng</th>
+                            <th>Đơn giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
+                            <th> </th>
+                        </tr>
+                        @foreach (CartItem item in Model)
+                        {
+
+                            <tr>
+                                <td><img src="~/Assets/Upload/Products/@item.photo" alt=""></td>
+                                <td><a href="/Product/ChiTietSanPham/@item.id">@item.name</a></td>
+                                <td>@item.price ₫</td>
+                                <td><input type="number" min="1" id="cell-number" name="product_@item.id" value="@item.number"></td>
+                                <td>@item.toPrice ₫</td>
+                                <td valign="top" class="delete-product"><a href="/Cart/Remove/@item.id"><i class="fas fa-times"></i></a></td>
+                            </tr>
+                        }
+                    </table>
+                    <input type="submit" value="Cập nhật giỏ hàng" class="btn btn-dark" />
+                    <a href="/Cart/Clear"><div class="btn btn-primary">Xóa toàn bộ</div></a>
+                </div>
+            </form>
+                <!-- end drop box -->
+        </div>
+        <div class="giohang-right">
+            <div class="vekhuyenmai">
+                <p>Chọn mã khuyến mại</p>
+                <span><a href="#"><i class="fas fa-ticket-alt"></i> Chọn hoặc nhập mã khuyến mại</a></span>
+            </div>
+            <div class="tongtien">
+                <h4>Chọn khu vực giao hàng</h4>
+                <form class="khuvuc">
+                    <input type="radio" name="address"> <label>Bắc Từ Liêm - Hà Nội</label>
+                    <br>
+                    <input type="radio" name="address"> <label>Quận 10 - TP. HCM</label>
+                </form>
+                @{ 
+                    ShoppingCart obj = new ShoppingCart();
+                }
+                <h4>Thành tiền: <span>@obj.CartTotal() ₫</span></h4>
+            </div>
+            <a href="/Cart/Checkout"><div class="btn-danger thanhtoan">Thanh toán</div></a>
+        </div>
+    </div>
+</div>

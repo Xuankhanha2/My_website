@@ -1,0 +1,124 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@* Lay ra DataContext db.Categories *@
+@using TrangChuWebsite.Models
+@using PagedList.Mvc
+@* Lay duoc Model list ra de dua vao trang nay *@
+@model PagedList.IPagedList<Product>
+<style>
+    .user-content {
+        margin: 0px;
+        padding: 0px;
+        margin-top: 15px;
+    }
+
+        .user-content table {
+            margin: 0px auto;
+            margin-top: 15px;
+            background: white;
+            width: 95%;
+        }
+
+            .user-content table tr {
+                height: 50px;
+                line-height: 50px;
+            }
+
+                .user-content table tr td {
+                    font-size: 18px;
+                    color: black;
+                }
+
+    td {
+        padding-left: 20px;
+    }
+
+        td i {
+            cursor: pointer;
+        }
+
+        td img {
+            width: 120px;
+            margin: 0px;
+            padding: 0px;
+        }
+    td a{
+        font-size: 14px;
+        padding: 5px 5px;
+    }
+    td a:hover{
+        text-decoration: underline;
+    }
+    th {
+        color: antiquewhite;
+        font-weight: 400;
+        padding-left: 20px;
+    }
+
+    .pagination {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+        .pagination li {
+            width: 38px;
+            height: 38px;
+            text-align: center;
+            line-height: 38px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            margin-right: 5px;
+            background-color: white;
+        }
+
+    .btn_add {
+        border-radius: 8px;
+        background-color: #333;
+        padding: 10px 0px;
+        text-align: center;
+        width: 160px;
+    }
+
+        .btn_add a {
+            text-decoration: none;
+            color: antiquewhite;
+        }
+
+    .hang:hover td {
+        background-color: #f5f5f5;
+    }
+</style>
+<div class="user-content">
+    <div style="width: 95%; margin: auto;">
+        <div class="btn_add"><a href="/Admin/Products/Create">Add Products</a></div>
+    </div>
+    <table border="0" cellpadding="5">
+        <tr align="left" style="background: #333;">
+            <th>Image</th>
+            <th>Title</th>
+            <th>Hot</th>
+            <th> </th>
+        </tr>
+        <!-- phan co so du leu -->
+        @foreach (Product item in Model)
+        {
+    <tr align="left" class="hang">
+        <td><img src="~/Assets/Upload/Products/@item.photo" /></td>
+        <td>@item.name</td>
+        @*<td>@item.description</td>*@
+        @*<td>@item.content</td>*@
+        <td>@item.hot</td>
+        <td width="200">
+            <a href="/Admin/Products/Images/@item.id">Images</a>
+            <a href="/Admin/Products/Update/@item.id">Edit</a>
+            <a href="/Admin/Products/Delete/@item.id" onclick="return window.confirm('Bạn muốn xóa mặt hàng này?');">Delete</a>
+        </td>
+    </tr>
+        }
+    </table>
+    @Html.PagedListPager(Model, page => Url.Action("Read", new { page }))
+</div>
+
+
+

@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@* Lay ra DataContext db.Categories *@
+<div class="add_user">
+    <style>
+        .add_user {
+            background-color: white;
+            width: 90%;
+            margin: auto;
+            padding-left: 25px;
+            padding-top: 20px;
+        }
+
+        label {
+            display: block;
+            color: black;
+        }
+
+        .txt {
+            border: 1px solid #ebebeb;
+            width: 80%;
+            display: block;
+            padding: 3px;
+        }
+
+        .btn {
+            padding: 5px 10px;
+            margin: 15px 0px;
+            color: white;
+        }
+
+        .txtarea {
+            width: 80%;
+            display: block;
+            padding: 3px;
+            border: 1px solid #ebebeb;
+        }
+
+        input {
+            display: block;
+        }
+    </style>
+    <form action="" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+        <label>Photo</label>
+        <input type="file" name="photo">
+
+        <input type="submit" name="submit" value="Gửi" class="btn btn-primary">
+        <input type="reset" value="reset" class="btn btn-secondary">
+    </form>
+</div>
+
+

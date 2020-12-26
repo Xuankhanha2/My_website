@@ -1,0 +1,186 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@* Lay ra DataContext db.Categories *@
+@using TrangChuWebsite.Models
+@using System.Data;
+@using System.Data.SqlClient;
+@using System.Configuration;
+@functions{
+
+    //Lay ra cac danh muc cha cap 0 parent_id == 0
+    public DataContext db = new DataContext();
+    public DataTable listCategories()
+    {
+        string StringConn = ConfigurationManager.ConnectionStrings["connection"].ToString();
+        DataTable dt = new DataTable();
+        using (SqlConnection conn = new SqlConnection(StringConn))
+        {
+            SqlCommand cmd = new SqlCommand("select * from Categories where parent_id = 0 order by id asc", conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
+    }
+    //Lay ra cac danh muc cap con
+    public DataTable lisCategoriesSub(int id)
+    {
+        int _id = id;
+        string StringConn = ConfigurationManager.ConnectionStrings["connection"].ToString();
+        DataTable dt = new DataTable();
+        using (SqlConnection conn = new SqlConnection(StringConn))
+        {
+            SqlCommand cmd = new SqlCommand("select * from Categories where parent_id = @id order by id asc", conn);
+            cmd.Parameters.AddWithValue("@id", _id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
+    }
+    // Lay Sub category
+    public List<Category> setSubList(int id)
+    {
+        int _id = id;
+        List<Category> SubList = db.Categories.Where(anhxa => anhxa.parent_id == _id).ToList();
+        return SubList != null ? SubList : new List<Category>();
+    }
+}
+<div class="add_user">
+    <style>
+        .add_user {
+            background-color: white;
+            width: 90%;
+            margin: auto;
+            padding-left: 25px;
+            padding-top: 20px;
+        }
+
+        label {
+            display: block;
+            color: black;
+        }
+
+        .txt {
+            border: 1px solid #ebebeb;
+            width: 80%;
+            display: block;
+            padding: 3px;
+        }
+
+        .btn {
+            padding: 5px 10px;
+            margin: 15px 0px;
+            color: white;
+        }
+
+        .txtarea {
+            width: 80%;
+            display: block;
+            padding: 3px;
+            border: 1px solid #ebebeb;
+        }
+
+        input {
+            display: block;
+        }
+
+        select {
+            min-width: 200px;
+        }
+    </style>
+    <form action="" method="post" enctype="multipart/form-data" onsubmit="return check_number()">
+        @Html.AntiForgeryToken()
+        <label>Tên mặt hàng</label>
+        <input type="text" name="name" value="@if (Model != null) {<text>@Model["name"]</text>}" class="txt" id="name" required>
+        <br />
+        <label>Giá gốc</label>
+        <input type="text" name="price" id="price" value="@if (Model != null) {<text>@Model["price"]</text>}" class="txt" required/>
+        <br />
+        <label>Phân loại</label>
+        <select name="category_id">
+            @{
+                DataTable banghi = listCategories();
+            }
+            @foreach (DataRow item in banghi.Rows)
+            {
+                <option @if (Model != null && Convert.ToInt32(Model["category_id"]) == Convert.ToInt32(item["id"])) { <text> selected</text>} value="@item["id"]">
+                    @item["tensanpham"]
+                </option>
+                List<Category> listSub = setSubList(Convert.ToInt32(item["id"]));
+                if (listSub.Count() > 0)
+                {
+                    foreach (Category sub in listSub)
+                    {
+                        <option @if (Model != null && Convert.ToInt32(Model["category_id"]) == Convert.ToInt32(sub.id)) { <text> selected</text>} value="@sub.id">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@sub.tensanpham
+                        </option>
+                    }
+
+                }
+            }
+        </select>
+        <br/>
+        <br />
+        <label>Giảm giá (%)</label>
+        <input type="text" name="discount" id="discount" value="@if (Model != null) {<text>@Model["discount"]</text>}" class="txt" required/>
+
+        <label>Description</label>
+        <textarea name="description" class="txtarea" id="description">@if (Model != null) {<text>@Model["description"]</text>}</textarea>
+        <script language="javascript">
+            CKEDITOR.replace("description");
+        </script>
+        <br />
+        <label>Trạng thái: </label>
+        <div style="display: flex; line-height: 30px;">
+            <input type="checkbox" name="content" id="content" style="margin-top: 8px; margin-right: 10px;" @if (Model != null && Convert.ToInt32(Model["content"]) == 1) { <text> checked</text>} /> <span>Còn hàng</span>
+        </div>
+        <br />
+        <label>Hot product</label>
+        <input type="checkbox" class="ckbox" name="hot" @if (Model != null && Model["hot"] == 1) {<text>checked</text>}/>
+        <br />
+        <label>Thêm ảnh</label>
+        <input type="file" name="photo">
+        <input type="submit" name="submit" value="Gửi" class="btn btn-primary" onclick="Check_null()">
+        <input type="reset" value="reset" class="btn btn-secondary">
+    </form>
+</div>
+<script>
+    function Check_null() {
+        var reg = /[0-9]+/
+        $(document).ready(function () {
+            //Ô tên sản phẩm
+            if (document.getElementById("name").value == "") {
+                document.getElementById("name").focus;
+                var a = $("#name").position();
+                window.scrollTo(a.top, 0);
+            }
+            //Ô giá gốc
+            if (document.getElementById("price").value == "") {
+                document.getElementById("price").focus;
+                var a = $("#price").position();
+                window.scrollTo(a.top, 0);
+            }
+            //Ô giảm giá
+            if (document.getElementById("discount").value == "") {
+                document.getElementById("discount").focus;
+                var a = $("#discount").position();
+                window.scrollTo(a.top, 0);
+            }
+        })
+    }
+
+    function check_number() {
+            var price = document.getElementById("price").value;
+            var discount = document.getElementById("discount").value;
+            regPrice = /^[0-9][0-9]+[0-9]$/g
+            regDiscount = /^[0-9]?[0-9]$/g
+            if (regPrice.test(price) == false) {
+                alert("Giá tiền nhập chưa đúng.");
+                return false;
+            }
+            if (regDiscount.test(discount) == false) {
+                alert("Tỷ lệ giảm giá nhập chưa đúng.");
+                return false;
+            }
+    }
+</script>

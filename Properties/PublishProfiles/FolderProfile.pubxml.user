@@ -1,0 +1,2990 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\VU_XUAN_KHANH\OneDrive\Máy tính\publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Areas/Admin/Assets/css/bootstrap-datetimepicker.min.css">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/css/font-face.css">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/css/theme.css">
+      <publishTime>10/06/2020 18:49:30</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-100.eot">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-100.svg">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-100.ttf">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-100.woff">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-100.woff2">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-100italic.eot">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-100italic.svg">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-100italic.ttf">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-100italic.woff">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-100italic.woff2">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-200.eot">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-200.svg">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-200.ttf">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-200.woff">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-200.woff2">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-200italic.eot">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-200italic.svg">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-200italic.ttf">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-200italic.woff">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-200italic.woff2">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-300.eot">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-300.svg">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-300.ttf">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-300.woff">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-300.woff2">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-300italic.eot">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-300italic.svg">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-300italic.ttf">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-300italic.woff">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-300italic.woff2">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-500.eot">
+      <publishTime>10/02/2020 16:33:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-500.svg">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-500.ttf">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-500.woff">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-500.woff2">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-500italic.eot">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-500italic.svg">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-500italic.ttf">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-500italic.woff">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-500italic.woff2">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-600.eot">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-600.svg">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-600.ttf">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-600.woff">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-600.woff2">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-600italic.eot">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-600italic.svg">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-600italic.ttf">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-600italic.woff">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-600italic.woff2">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-700.eot">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-700.svg">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-700.ttf">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-700.woff">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-700.woff2">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-700italic.eot">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-700italic.svg">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-700italic.ttf">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-700italic.woff">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-700italic.woff2">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-800.eot">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-800.svg">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-800.ttf">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-800.woff">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-800.woff2">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-800italic.eot">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-800italic.svg">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-800italic.ttf">
+      <publishTime>10/02/2020 16:33:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-800italic.woff">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-800italic.woff2">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-900.eot">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-900.svg">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-900.ttf">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-900.woff">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-900.woff2">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-900italic.eot">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-900italic.svg">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-900italic.ttf">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-900italic.woff">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-900italic.woff2">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-italic.eot">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-italic.svg">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-italic.ttf">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-italic.woff">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-italic.woff2">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-regular.eot">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-regular.svg">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-regular.ttf">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-regular.woff">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/fonts/poppins/poppins-v5-latin-regular.woff2">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/images/bg-title-01.jpg">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/images/bg-title-02.jpg">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/images/icon/avatar-01.jpg">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/images/icon/avatar-02.jpg">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/images/icon/avatar-03.jpg">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/images/icon/avatar-04.jpg">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/images/icon/avatar-05.jpg">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/images/icon/avatar-06.jpg">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/images/icon/avatar-big-01.jpg">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/images/icon/logo-blue.png">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/images/icon/logo-mini.png">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/images/icon/logo-white.png">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/images/icon/logo.png">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/images/icon/Untitled-1.jpg">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/js/bootstrap-datetimepicker.js">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/js/main.js">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/js/moment.js">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/media/9606031aabebde32fa96edeff071a132.jpg">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/animsition/animsition.min.css">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/animsition/animsition.min.js">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/bootstrap-4.1/bootstrap.min.css">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/bootstrap-4.1/bootstrap.min.js">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/bootstrap-4.1/popper.min.js">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/chartjs/Chart.bundle.min.js">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/circle-progress/circle-progress.js">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/circle-progress/circle-progress.min.js">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/countdown/countdowntime.js">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/countdown/jquery.countdown.min.js">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/countdown/moment-timezone-with-data.min.js">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/countdown/moment-timezone.min.js">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/countdown/moment.min.js">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/counter-up/jquery.counterup.min.js">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/counter-up/jquery.waypoints.min.js">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/counter-up/waypoints.min.js">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/css-hamburgers/hamburgers.css">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/css-hamburgers/hamburgers.min.css">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-4.7/css/font-awesome.css">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-4.7/css/font-awesome.min.css">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-4.7/fonts/fontawesome-webfont.eot">
+      <publishTime>10/02/2020 16:33:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-4.7/fonts/fontawesome-webfont.svg">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-4.7/fonts/fontawesome-webfont.ttf">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-4.7/fonts/fontawesome-webfont.woff">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-4.7/fonts/fontawesome-webfont.woff2">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-4.7/fonts/FontAwesome.otf">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-4.7/HELP-US-OUT.txt">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-5/css/fontawesome-all.min.css">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-5/webfonts/fa-brands-400.eot">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-5/webfonts/fa-brands-400.svg">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-5/webfonts/fa-brands-400.ttf">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-5/webfonts/fa-brands-400.woff">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-5/webfonts/fa-brands-400.woff2">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-5/webfonts/fa-regular-400.eot">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-5/webfonts/fa-regular-400.svg">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-5/webfonts/fa-regular-400.ttf">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-5/webfonts/fa-regular-400.woff">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-5/webfonts/fa-regular-400.woff2">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-5/webfonts/fa-solid-900.eot">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-5/webfonts/fa-solid-900.svg">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-5/webfonts/fa-solid-900.ttf">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-5/webfonts/fa-solid-900.woff">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/font-awesome-5/webfonts/fa-solid-900.woff2">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/CHANGELOG.txt">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/CONTRIBUTING.txt">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/fullcalendar.css">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/fullcalendar.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/fullcalendar.min.css">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/fullcalendar.min.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/fullcalendar.print.css">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/fullcalendar.print.min.css">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/gcal.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/gcal.min.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/lib/moment.min.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/LICENSE.txt">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale-all.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/af.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/ar-dz.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/ar-kw.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/ar-ly.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/ar-ma.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/ar-sa.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/ar-tn.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/ar.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/be.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/bg.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/bs.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/ca.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/cs.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/da.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/de-at.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/de-ch.js">
+      <publishTime>10/02/2020 16:33:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/de.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/el.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/en-au.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/en-ca.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/en-gb.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/en-ie.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/en-nz.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/es-do.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/es-us.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/es.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/et.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/eu.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/fa.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/fi.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/fr-ca.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/fr-ch.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/fr.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/gl.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/he.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/hi.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/hr.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/hu.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/id.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/is.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/it.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/ja.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/ka.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/kk.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/ko.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/lb.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/lt.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/lv.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/mk.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/ms-my.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/ms.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/nb.js">
+      <publishTime>10/02/2020 16:33:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/nl-be.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/nl.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/nn.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/pl.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/pt-br.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/pt.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/ro.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/ru.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/sk.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/sl.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/sq.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/sr-cyrl.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/sr.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/sv.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/th.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/tr.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/uk.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/vi.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/zh-cn.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/zh-hk.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/locale/zh-tw.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/fullcalendar-3.10.0/README.txt">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/jquery-3.2.1.min.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/jquery-ui.min.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/lightbox2/dist/css/lightbox.css">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/lightbox2/dist/images/close.png">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/lightbox2/dist/images/loading.gif">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/lightbox2/dist/images/next.png">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/lightbox2/dist/images/prev.png">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/lightbox2/dist/js/lightbox-plus-jquery.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/lightbox2/dist/js/lightbox-plus-jquery.min.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/lightbox2/dist/js/lightbox-plus-jquery.min.map">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/lightbox2/dist/js/lightbox.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/lightbox2/dist/js/lightbox.min.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/lightbox2/dist/js/lightbox.min.map">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/lightbox2/src/css/lightbox.css">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/lightbox2/src/images/close.png">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/lightbox2/src/images/loading.gif">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/lightbox2/src/images/next.png">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/lightbox2/src/images/prev.png">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/lightbox2/src/js/lightbox.js">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/mdi-font/css/material-design-iconic-font.css">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/mdi-font/css/material-design-iconic-font.min.css">
+      <publishTime>10/02/2020 16:33:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/mdi-font/fonts/Material-Design-Iconic-Font.eot">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/mdi-font/fonts/Material-Design-Iconic-Font.svg">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/mdi-font/fonts/Material-Design-Iconic-Font.ttf">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/mdi-font/fonts/Material-Design-Iconic-Font.woff">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/mdi-font/fonts/Material-Design-Iconic-Font.woff2">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/perfect-scrollbar/perfect-scrollbar.css">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/perfect-scrollbar/perfect-scrollbar.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/perfect-scrollbar/perfect-scrollbar.min.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/progressbar/progressbar.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/progressbar/progressbar.min.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/select2/select2.min.css">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/select2/select2.min.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/slick/ajax-loader.gif">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/slick/config.rb">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/slick/fonts/slick.eot">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/slick/fonts/slick.svg">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/slick/fonts/slick.ttf">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/slick/fonts/slick.woff">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/slick/slick-theme.css">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/slick/slick-theme.less">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/slick/slick-theme.scss">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/slick/slick.css">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/slick/slick.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/slick/slick.less">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/slick/slick.min.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/slick/slick.scss">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/smk-accordion/accordion.css">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/smk-accordion/accordion.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/smk-accordion/accordion.min.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/sweetalert/sweetalert.min.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/vector-map/jquery.vmap.brazil.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/vector-map/jquery.vmap.europe.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/vector-map/jquery.vmap.france.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/vector-map/jquery.vmap.germany.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/vector-map/jquery.vmap.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/vector-map/jquery.vmap.min.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/vector-map/jquery.vmap.russia.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/vector-map/jquery.vmap.sampledata.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/vector-map/jquery.vmap.usa.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/vector-map/jquery.vmap.world.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/vector-map/jqvmap.min.css">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/wow/animate.css">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Assets/vendor/wow/wow.min.js">
+      <publishTime>10/02/2020 16:33:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Category/Create.cshtml">
+      <publishTime>11/15/2020 15:14:37</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Category/Edit.cshtml">
+      <publishTime>10/25/2020 17:41:14</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Category/Read.cshtml">
+      <publishTime>11/24/2020 16:53:27</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Customers/Index.cshtml">
+      <publishTime>12/01/2020 01:03:12</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Home/Index.cshtml">
+      <publishTime>11/29/2020 23:09:32</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Login/Index.cshtml">
+      <publishTime>10/10/2020 23:35:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Login/loging.cshtml">
+      <publishTime>10/03/2020 22:17:51</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/News/CreateUpdate.cshtml">
+      <publishTime>11/21/2020 00:44:38</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/News/Read.cshtml">
+      <publishTime>11/20/2020 23:50:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Products/ChangeImages.cshtml">
+      <publishTime>12/01/2020 13:07:26</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Products/CreateImages.cshtml">
+      <publishTime>12/01/2020 13:09:26</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Products/CreateUpdate.cshtml">
+      <publishTime>11/24/2020 17:52:13</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Products/Images.cshtml">
+      <publishTime>12/01/2020 13:10:39</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Products/Read.cshtml">
+      <publishTime>11/24/2020 14:52:37</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Shared/_Layout.cshtml">
+      <publishTime>12/01/2020 14:06:27</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Shared/_login_bg.cshtml">
+      <publishTime>10/03/2020 22:29:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Users/Create.cshtml">
+      <publishTime>10/11/2020 01:37:57</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Users/Read.cshtml">
+      <publishTime>11/29/2020 22:56:31</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/web.config">
+      <publishTime>10/02/2020 14:19:37</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/_ViewStart.cshtml">
+      <publishTime>10/06/2020 01:52:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/adapters/jquery.js">
+      <publishTime>10/16/2020 23:09:59</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/build-config.js">
+      <publishTime>10/16/2020 23:09:59</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/CHANGES.md">
+      <publishTime>10/16/2020 23:09:59</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/ckeditor.js">
+      <publishTime>10/16/2020 23:10:00</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/config.js">
+      <publishTime>10/16/2020 23:10:00</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/contents.css">
+      <publishTime>10/16/2020 23:10:01</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/af.js">
+      <publishTime>10/16/2020 23:10:01</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/ar.js">
+      <publishTime>10/16/2020 23:10:01</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/az.js">
+      <publishTime>10/16/2020 23:10:01</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/bg.js">
+      <publishTime>10/16/2020 23:10:01</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/bn.js">
+      <publishTime>10/16/2020 23:10:01</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/bs.js">
+      <publishTime>10/16/2020 23:10:01</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/ca.js">
+      <publishTime>10/16/2020 23:10:01</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/cs.js">
+      <publishTime>10/16/2020 23:10:02</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/cy.js">
+      <publishTime>10/16/2020 23:10:02</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/da.js">
+      <publishTime>10/16/2020 23:10:02</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/de-ch.js">
+      <publishTime>10/16/2020 23:10:02</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/de.js">
+      <publishTime>10/16/2020 23:10:03</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/el.js">
+      <publishTime>10/16/2020 23:10:03</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/en-au.js">
+      <publishTime>10/16/2020 23:10:03</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/en-ca.js">
+      <publishTime>10/16/2020 23:10:03</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/en-gb.js">
+      <publishTime>10/16/2020 23:10:03</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/en.js">
+      <publishTime>10/16/2020 23:10:03</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/eo.js">
+      <publishTime>10/16/2020 23:10:03</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/es-mx.js">
+      <publishTime>10/16/2020 23:10:04</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/es.js">
+      <publishTime>10/16/2020 23:10:04</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/et.js">
+      <publishTime>10/16/2020 23:10:04</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/eu.js">
+      <publishTime>10/16/2020 23:10:04</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/fa.js">
+      <publishTime>10/16/2020 23:10:04</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/fi.js">
+      <publishTime>10/16/2020 23:10:04</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/fo.js">
+      <publishTime>10/16/2020 23:10:04</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/fr-ca.js">
+      <publishTime>10/16/2020 23:10:04</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/fr.js">
+      <publishTime>10/16/2020 23:10:05</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/gl.js">
+      <publishTime>10/16/2020 23:10:05</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/gu.js">
+      <publishTime>10/16/2020 23:10:05</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/he.js">
+      <publishTime>10/16/2020 23:10:05</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/hi.js">
+      <publishTime>10/16/2020 23:10:05</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/hr.js">
+      <publishTime>10/16/2020 23:10:06</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/hu.js">
+      <publishTime>10/16/2020 23:10:06</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/id.js">
+      <publishTime>10/16/2020 23:10:06</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/is.js">
+      <publishTime>10/16/2020 23:10:06</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/it.js">
+      <publishTime>10/16/2020 23:10:06</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/ja.js">
+      <publishTime>10/16/2020 23:10:06</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/ka.js">
+      <publishTime>10/16/2020 23:10:07</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/km.js">
+      <publishTime>10/16/2020 23:10:07</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/ko.js">
+      <publishTime>10/16/2020 23:10:07</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/ku.js">
+      <publishTime>10/16/2020 23:10:07</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/lt.js">
+      <publishTime>10/16/2020 23:10:07</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/lv.js">
+      <publishTime>10/16/2020 23:10:07</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/mk.js">
+      <publishTime>10/16/2020 23:10:07</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/mn.js">
+      <publishTime>10/16/2020 23:10:07</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/ms.js">
+      <publishTime>10/16/2020 23:10:08</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/nb.js">
+      <publishTime>10/16/2020 23:10:08</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/nl.js">
+      <publishTime>10/16/2020 23:10:08</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/no.js">
+      <publishTime>10/16/2020 23:10:08</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/oc.js">
+      <publishTime>10/16/2020 23:10:08</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/pl.js">
+      <publishTime>10/16/2020 23:10:08</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/pt-br.js">
+      <publishTime>10/16/2020 23:10:08</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/pt.js">
+      <publishTime>10/16/2020 23:10:08</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/ro.js">
+      <publishTime>10/16/2020 23:10:08</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/ru.js">
+      <publishTime>10/16/2020 23:10:09</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/si.js">
+      <publishTime>10/16/2020 23:10:09</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/sk.js">
+      <publishTime>10/16/2020 23:10:09</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/sl.js">
+      <publishTime>10/16/2020 23:10:09</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/sq.js">
+      <publishTime>10/16/2020 23:10:09</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/sr-latn.js">
+      <publishTime>10/16/2020 23:10:09</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/sr.js">
+      <publishTime>10/16/2020 23:10:09</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/sv.js">
+      <publishTime>10/16/2020 23:10:09</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/th.js">
+      <publishTime>10/16/2020 23:10:09</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/tr.js">
+      <publishTime>10/16/2020 23:10:10</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/tt.js">
+      <publishTime>10/16/2020 23:10:10</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/ug.js">
+      <publishTime>10/16/2020 23:10:10</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/uk.js">
+      <publishTime>10/16/2020 23:10:10</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/vi.js">
+      <publishTime>10/16/2020 23:10:10</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/zh-cn.js">
+      <publishTime>10/16/2020 23:10:10</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/lang/zh.js">
+      <publishTime>10/16/2020 23:10:10</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/LICENSE.md">
+      <publishTime>10/16/2020 23:10:10</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js">
+      <publishTime>10/16/2020 23:10:10</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/af.js">
+      <publishTime>10/16/2020 23:10:10</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js">
+      <publishTime>10/16/2020 23:10:10</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/az.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/da.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/de.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/el.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/en-au.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/en.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/es-mx.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/es.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/et.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js">
+      <publishTime>10/16/2020 23:10:11</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js">
+      <publishTime>10/16/2020 23:10:12</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/he.js">
+      <publishTime>10/16/2020 23:10:12</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js">
+      <publishTime>10/16/2020 23:10:12</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js">
+      <publishTime>10/16/2020 23:10:12</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js">
+      <publishTime>10/16/2020 23:10:12</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/id.js">
+      <publishTime>10/16/2020 23:10:12</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/it.js">
+      <publishTime>10/16/2020 23:10:12</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js">
+      <publishTime>10/16/2020 23:10:12</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/km.js">
+      <publishTime>10/16/2020 23:10:12</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js">
+      <publishTime>10/16/2020 23:10:12</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js">
+      <publishTime>10/16/2020 23:10:12</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js">
+      <publishTime>10/16/2020 23:10:12</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js">
+      <publishTime>10/16/2020 23:10:12</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js">
+      <publishTime>10/16/2020 23:10:12</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js">
+      <publishTime>10/16/2020 23:10:12</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js">
+      <publishTime>10/16/2020 23:10:12</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js">
+      <publishTime>10/16/2020 23:10:12</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/no.js">
+      <publishTime>10/16/2020 23:10:12</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/oc.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/si.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/th.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js">
+      <publishTime>10/16/2020 23:10:13</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt">
+      <publishTime>10/16/2020 23:10:14</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/about/dialogs/about.js">
+      <publishTime>10/16/2020 23:10:14</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png">
+      <publishTime>10/16/2020 23:10:14</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/about/dialogs/logo_ckeditor.png">
+      <publishTime>10/16/2020 23:10:14</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/clipboard/dialogs/paste.js">
+      <publishTime>10/16/2020 23:10:14</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/colordialog/dialogs/colordialog.css">
+      <publishTime>10/16/2020 23:10:14</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/colordialog/dialogs/colordialog.js">
+      <publishTime>10/16/2020 23:10:14</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/copyformatting/cursors/cursor-disabled.svg">
+      <publishTime>10/16/2020 23:10:14</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/copyformatting/cursors/cursor.svg">
+      <publishTime>10/16/2020 23:10:14</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/copyformatting/styles/copyformatting.css">
+      <publishTime>10/16/2020 23:10:14</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/dialog/dialogDefinition.js">
+      <publishTime>10/16/2020 23:10:14</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/dialog/styles/dialog.css">
+      <publishTime>10/16/2020 23:10:14</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/div/dialogs/div.js">
+      <publishTime>10/16/2020 23:10:14</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/CHANGELOG.md">
+      <publishTime>10/16/2020 23:10:14</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/LICENSE.md">
+      <publishTime>10/16/2020 23:10:14</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/package.json">
+      <publishTime>10/16/2020 23:10:14</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/plugindefinition.js">
+      <publishTime>10/16/2020 23:10:14</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/README.md">
+      <publishTime>10/16/2020 23:10:14</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/authentication.js">
+      <publishTime>10/16/2020 23:10:15</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/exportpdf.js">
+      <publishTime>10/16/2020 23:10:15</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/configfilename.html">
+      <publishTime>10/16/2020 23:10:15</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/configfilename.md">
+      <publishTime>10/16/2020 23:10:15</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/emptyeditor.html">
+      <publishTime>10/16/2020 23:10:15</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/emptyeditor.md">
+      <publishTime>10/16/2020 23:10:15</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/integration.html">
+      <publishTime>10/16/2020 23:10:15</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/integration.md">
+      <publishTime>10/16/2020 23:10:15</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/integrations/easyimage.html">
+      <publishTime>10/16/2020 23:10:15</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/integrations/easyimage.md">
+      <publishTime>10/16/2020 23:10:15</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/notifications.html">
+      <publishTime>10/16/2020 23:10:15</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/notifications.md">
+      <publishTime>10/16/2020 23:10:15</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/notificationsasync.html">
+      <publishTime>10/16/2020 23:10:15</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/notificationsasync.md">
+      <publishTime>10/16/2020 23:10:15</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/paperformat.html">
+      <publishTime>10/16/2020 23:10:15</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/paperformat.md">
+      <publishTime>10/16/2020 23:10:15</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/readonly.html">
+      <publishTime>10/16/2020 23:10:15</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/readonly.md">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/stylesheets.html">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/stylesheets.md">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/tokenfetching.html">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/tokenfetching.md">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/tokentwoeditorscorrect.html">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/tokentwoeditorscorrect.md">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/tokentwoeditorswrong.html">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/tokentwoeditorswrong.md">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/tokenwithouturl.html">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/tokenwithouturl.md">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/wrongendpoint.html">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/manual/wrongendpoint.md">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/notification.js">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/resourcespaths.js">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/statistics.js">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/stylesheets.js">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/exportpdf/tests/_helpers/tools.js">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/find/dialogs/find.js">
+      <publishTime>10/16/2020 23:10:16</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/flash/dialogs/flash.js">
+      <publishTime>10/16/2020 23:10:17</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/flash/images/placeholder.png">
+      <publishTime>10/16/2020 23:10:17</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/forms/dialogs/button.js">
+      <publishTime>10/16/2020 23:10:17</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/forms/dialogs/checkbox.js">
+      <publishTime>10/16/2020 23:10:17</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/forms/dialogs/form.js">
+      <publishTime>10/16/2020 23:10:17</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/forms/dialogs/hiddenfield.js">
+      <publishTime>10/16/2020 23:10:17</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/forms/dialogs/radio.js">
+      <publishTime>10/16/2020 23:10:17</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/forms/dialogs/select.js">
+      <publishTime>10/16/2020 23:10:17</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/forms/dialogs/textarea.js">
+      <publishTime>10/16/2020 23:10:17</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/forms/dialogs/textfield.js">
+      <publishTime>10/16/2020 23:10:17</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/forms/images/hiddenfield.gif">
+      <publishTime>10/16/2020 23:10:17</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/icons.png">
+      <publishTime>10/16/2020 23:10:17</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/icons_hidpi.png">
+      <publishTime>10/16/2020 23:10:17</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/iframe/dialogs/iframe.js">
+      <publishTime>10/16/2020 23:10:17</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/iframe/images/placeholder.png">
+      <publishTime>10/16/2020 23:10:17</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/image/dialogs/image.js">
+      <publishTime>10/16/2020 23:10:17</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/image/images/noimage.png">
+      <publishTime>10/16/2020 23:10:17</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/link/dialogs/anchor.js">
+      <publishTime>10/16/2020 23:10:17</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/link/dialogs/link.js">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/link/images/anchor.png">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/link/images/hidpi/anchor.png">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/liststyle/dialogs/liststyle.js">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/magicline/images/hidpi/icon-rtl.png">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/magicline/images/hidpi/icon.png">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/magicline/images/icon-rtl.png">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/magicline/images/icon.png">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/pagebreak/images/pagebreak.gif">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/pastefromgdocs/filter/default.js">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/pastefromword/filter/default.js">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/pastetools/filter/common.js">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/pastetools/filter/image.js">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/preview/images/pagebreak.gif">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/preview/preview.html">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/preview/styles/screen.css">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/scayt/CHANGELOG.md">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/scayt/dialogs/dialog.css">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/scayt/dialogs/options.js">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/scayt/dialogs/toolbar.css">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/scayt/LICENSE.md">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/scayt/README.md">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css">
+      <publishTime>10/16/2020 23:10:18</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/showblocks/images/block_address.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/showblocks/images/block_blockquote.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/showblocks/images/block_div.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/showblocks/images/block_h1.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/showblocks/images/block_h2.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/showblocks/images/block_h3.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/showblocks/images/block_h4.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/showblocks/images/block_h5.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/showblocks/images/block_h6.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/showblocks/images/block_p.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/showblocks/images/block_pre.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/dialogs/smiley.js">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/angel_smile.gif">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/angel_smile.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/angry_smile.gif">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/angry_smile.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/broken_heart.gif">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/broken_heart.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/confused_smile.gif">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/confused_smile.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/cry_smile.gif">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/cry_smile.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/devil_smile.gif">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/devil_smile.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/embaressed_smile.gif">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/embarrassed_smile.gif">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/embarrassed_smile.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/envelope.gif">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/envelope.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/heart.gif">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/heart.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/kiss.gif">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/kiss.png">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/lightbulb.gif">
+      <publishTime>10/16/2020 23:10:19</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/lightbulb.png">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/omg_smile.gif">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/omg_smile.png">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/regular_smile.gif">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/regular_smile.png">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/sad_smile.gif">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/sad_smile.png">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/shades_smile.gif">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/shades_smile.png">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/teeth_smile.gif">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/teeth_smile.png">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/thumbs_down.gif">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/thumbs_down.png">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/thumbs_up.gif">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/thumbs_up.png">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/tongue_smile.gif">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/tongue_smile.png">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/tounge_smile.gif">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.gif">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.png">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/wink_smile.gif">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/smiley/images/wink_smile.png">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/af.js">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/ar.js">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/az.js">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/bg.js">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/ca.js">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/cs.js">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/cy.js">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/da.js">
+      <publishTime>10/16/2020 23:10:20</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/de.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/el.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/en-au.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/en-ca.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/en.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/eo.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/es-mx.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/es.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/et.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/eu.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/fa.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/fi.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/fr.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/gl.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/he.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/hr.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/hu.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/id.js">
+      <publishTime>10/16/2020 23:10:21</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/it.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/ja.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/km.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/ko.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/ku.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/lt.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/lv.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/nb.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/nl.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/no.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/oc.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/pl.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/pt.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/ro.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/ru.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/si.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/sk.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/sl.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/sq.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/sr-latn.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/sr.js">
+      <publishTime>10/16/2020 23:10:22</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/sv.js">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/th.js">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/tr.js">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/tt.js">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/ug.js">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/uk.js">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/vi.js">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/zh.js">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/specialchar/dialogs/specialchar.js">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/table/dialogs/table.js">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/tableselection/styles/tableselection.css">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/tabletools/dialogs/tableCell.js">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/templates/dialogs/templates.css">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/templates/dialogs/templates.js">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/templates/templates/default.js">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/templates/templates/images/template1.gif">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/templates/templates/images/template2.gif">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/templates/templates/images/template3.gif">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/widget/images/handle.png">
+      <publishTime>10/16/2020 23:10:23</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/wsc/dialogs/ciframe.html">
+      <publishTime>10/16/2020 23:10:24</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/wsc/dialogs/tmpFrameset.html">
+      <publishTime>10/16/2020 23:10:24</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/wsc/dialogs/wsc.css">
+      <publishTime>10/16/2020 23:10:24</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/wsc/dialogs/wsc.js">
+      <publishTime>10/16/2020 23:10:24</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/wsc/dialogs/wsc_ie.js">
+      <publishTime>10/16/2020 23:10:24</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/wsc/LICENSE.md">
+      <publishTime>10/16/2020 23:10:24</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/wsc/README.md">
+      <publishTime>10/16/2020 23:10:24</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css">
+      <publishTime>10/16/2020 23:10:24</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/README.md">
+      <publishTime>10/16/2020 23:10:24</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/css/samples.css">
+      <publishTime>10/16/2020 23:10:24</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/img/github-top.png">
+      <publishTime>10/16/2020 23:10:24</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/img/header-bg.png">
+      <publishTime>10/16/2020 23:10:24</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/img/header-separator.png">
+      <publishTime>10/16/2020 23:10:24</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/img/logo.png">
+      <publishTime>10/16/2020 23:10:24</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/img/logo.svg">
+      <publishTime>10/16/2020 23:10:24</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/img/navigation-tip.png">
+      <publishTime>10/16/2020 23:10:24</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/index.html">
+      <publishTime>10/16/2020 23:10:24</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/js/sample.js">
+      <publishTime>10/16/2020 23:10:25</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/js/sf.js">
+      <publishTime>10/16/2020 23:10:25</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/ajax.html">
+      <publishTime>10/16/2020 23:10:25</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/api.html">
+      <publishTime>10/16/2020 23:10:25</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/appendto.html">
+      <publishTime>10/16/2020 23:10:25</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/assets/inlineall/logo.png">
+      <publishTime>10/16/2020 23:10:25</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css">
+      <publishTime>10/16/2020 23:10:25</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/assets/posteddata.php">
+      <publishTime>10/16/2020 23:10:25</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/assets/sample.jpg">
+      <publishTime>10/16/2020 23:10:25</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/assets/uilanguages/languages.js">
+      <publishTime>10/16/2020 23:10:25</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/datafiltering.html">
+      <publishTime>10/16/2020 23:10:25</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/dialog/assets/my_dialog.js">
+      <publishTime>10/16/2020 23:10:25</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/dialog/dialog.html">
+      <publishTime>10/16/2020 23:10:25</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/divreplace.html">
+      <publishTime>10/16/2020 23:10:25</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/enterkey/enterkey.html">
+      <publishTime>10/16/2020 23:10:25</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.fla">
+      <publishTime>10/16/2020 23:10:26</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.swf">
+      <publishTime>10/16/2020 23:10:26</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/htmlwriter/assets/outputforflash/swfobject.js">
+      <publishTime>10/16/2020 23:10:26</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/htmlwriter/outputforflash.html">
+      <publishTime>10/16/2020 23:10:26</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/htmlwriter/outputhtml.html">
+      <publishTime>10/16/2020 23:10:26</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/index.html">
+      <publishTime>10/16/2020 23:10:26</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/inlineall.html">
+      <publishTime>10/16/2020 23:10:26</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/inlinebycode.html">
+      <publishTime>10/16/2020 23:10:26</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/inlinetextarea.html">
+      <publishTime>10/16/2020 23:10:26</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/jquery.html">
+      <publishTime>10/16/2020 23:10:26</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/magicline/magicline.html">
+      <publishTime>10/16/2020 23:10:26</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/readonly.html">
+      <publishTime>10/16/2020 23:10:26</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/replacebyclass.html">
+      <publishTime>10/16/2020 23:10:26</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/replacebycode.html">
+      <publishTime>10/16/2020 23:10:26</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/sample.css">
+      <publishTime>10/16/2020 23:10:26</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/sample.js">
+      <publishTime>10/16/2020 23:10:26</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/sample_posteddata.php">
+      <publishTime>10/16/2020 23:10:27</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/tabindex.html">
+      <publishTime>10/16/2020 23:10:27</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/toolbar/toolbar.html">
+      <publishTime>10/16/2020 23:10:27</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/uicolor.html">
+      <publishTime>10/16/2020 23:10:27</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/uilanguages.html">
+      <publishTime>10/16/2020 23:10:27</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/wysiwygarea/fullpage.html">
+      <publishTime>10/16/2020 23:10:27</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/old/xhtmlstyle.html">
+      <publishTime>10/16/2020 23:10:27</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/css/fontello.css">
+      <publishTime>10/16/2020 23:10:27</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/font/config.json">
+      <publishTime>10/16/2020 23:10:27</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/font/fontello.eot">
+      <publishTime>10/16/2020 23:10:27</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/font/fontello.svg">
+      <publishTime>10/16/2020 23:10:27</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/font/fontello.ttf">
+      <publishTime>10/16/2020 23:10:27</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/font/fontello.woff">
+      <publishTime>10/16/2020 23:10:27</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/font/LICENSE.txt">
+      <publishTime>10/16/2020 23:10:27</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/index.html">
+      <publishTime>10/16/2020 23:10:27</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js">
+      <publishTime>10/16/2020 23:10:27</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/js/fulltoolbareditor.js">
+      <publishTime>10/16/2020 23:10:27</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/js/toolbarmodifier.js">
+      <publishTime>10/16/2020 23:10:27</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/js/toolbartextmodifier.js">
+      <publishTime>10/16/2020 23:10:28</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css">
+      <publishTime>10/16/2020 23:10:28</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js">
+      <publishTime>10/16/2020 23:10:28</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/lib/codemirror/javascript.js">
+      <publishTime>10/16/2020 23:10:28</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/lib/codemirror/LICENSE">
+      <publishTime>10/16/2020 23:10:28</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css">
+      <publishTime>10/16/2020 23:10:28</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css">
+      <publishTime>10/16/2020 23:10:28</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js">
+      <publishTime>10/16/2020 23:10:28</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/dialog.css">
+      <publishTime>10/16/2020 23:10:28</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/dialog_ie.css">
+      <publishTime>10/16/2020 23:10:28</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/dialog_ie8.css">
+      <publishTime>10/16/2020 23:10:28</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/dialog_iequirks.css">
+      <publishTime>10/16/2020 23:10:28</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/editor.css">
+      <publishTime>10/16/2020 23:10:28</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/editor_gecko.css">
+      <publishTime>10/16/2020 23:10:28</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/editor_ie.css">
+      <publishTime>10/16/2020 23:10:28</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/editor_ie8.css">
+      <publishTime>10/16/2020 23:10:29</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/editor_iequirks.css">
+      <publishTime>10/16/2020 23:10:29</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/icons.png">
+      <publishTime>10/16/2020 23:10:29</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/icons_hidpi.png">
+      <publishTime>10/16/2020 23:10:29</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/images/arrow.png">
+      <publishTime>10/16/2020 23:10:29</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/images/close.png">
+      <publishTime>10/16/2020 23:10:29</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/images/hidpi/close.png">
+      <publishTime>10/16/2020 23:10:29</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/images/hidpi/lock-open.png">
+      <publishTime>10/16/2020 23:10:29</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/images/hidpi/lock.png">
+      <publishTime>10/16/2020 23:10:29</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/images/hidpi/refresh.png">
+      <publishTime>10/16/2020 23:10:29</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/images/lock-open.png">
+      <publishTime>10/16/2020 23:10:29</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/images/lock.png">
+      <publishTime>10/16/2020 23:10:29</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/images/refresh.png">
+      <publishTime>10/16/2020 23:10:29</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/images/spinner.gif">
+      <publishTime>10/16/2020 23:10:29</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/skins/moono-lisa/readme.md">
+      <publishTime>10/16/2020 23:10:29</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/styles.js">
+      <publishTime>10/16/2020 23:10:29</publishTime>
+    </File>
+    <File Include="Assets/ckeditor/vendor/promise.js">
+      <publishTime>10/16/2020 23:10:29</publishTime>
+    </File>
+    <File Include="Assets/css/bootstrap-grid.css">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/css/bootstrap-grid.css.map">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/css/bootstrap-grid.min.css">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/css/bootstrap-grid.min.css.map">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/css/bootstrap-reboot.css">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/css/bootstrap-reboot.css.map">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/css/bootstrap-reboot.min.css">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/css/bootstrap-reboot.min.css.map">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/css/bootstrap.css">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/css/bootstrap.css.map">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/css/bootstrap.min.css">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/css/bootstrap.min.css.map">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/css/owl.carousel.min.css">
+      <publishTime>04/20/2018 20:22:10</publishTime>
+    </File>
+    <File Include="Assets/css/owl.theme.default.min.css">
+      <publishTime>04/20/2018 20:22:10</publishTime>
+    </File>
+    <File Include="Assets/css/style.css">
+      <publishTime>11/26/2020 23:39:59</publishTime>
+    </File>
+    <File Include="Assets/css/style2.css">
+      <publishTime>12/02/2020 01:32:43</publishTime>
+    </File>
+    <File Include="Assets/css/style3.css">
+      <publishTime>11/19/2020 13:13:45</publishTime>
+    </File>
+    <File Include="Assets/images/adv1.jpg">
+      <publishTime>09/18/2020 01:25:43</publishTime>
+    </File>
+    <File Include="Assets/images/adv2.jpg">
+      <publishTime>09/18/2020 01:28:40</publishTime>
+    </File>
+    <File Include="Assets/images/adv3.jpg">
+      <publishTime>09/18/2020 01:29:18</publishTime>
+    </File>
+    <File Include="Assets/images/adv4.jpg">
+      <publishTime>09/18/2020 01:30:31</publishTime>
+    </File>
+    <File Include="Assets/images/avatar-placeholder.png">
+      <publishTime>11/15/2020 12:32:47</publishTime>
+    </File>
+    <File Include="Assets/images/backup sql.png">
+      <publishTime>09/15/2020 20:55:30</publishTime>
+    </File>
+    <File Include="Assets/images/banner-image1.jpg">
+      <publishTime>09/07/2020 21:58:10</publishTime>
+    </File>
+    <File Include="Assets/images/banner-image2.jpg">
+      <publishTime>09/07/2020 21:27:42</publishTime>
+    </File>
+    <File Include="Assets/images/banner-image3.jpg">
+      <publishTime>09/07/2020 21:25:43</publishTime>
+    </File>
+    <File Include="Assets/images/banner-image4.jpg">
+      <publishTime>09/07/2020 21:41:07</publishTime>
+    </File>
+    <File Include="Assets/images/Banner-logo.jpg">
+      <publishTime>09/07/2020 21:04:17</publishTime>
+    </File>
+    <File Include="Assets/images/banner-middle.jpg">
+      <publishTime>11/09/2020 15:38:08</publishTime>
+    </File>
+    <File Include="Assets/images/facebook.png">
+      <publishTime>09/11/2020 15:15:17</publishTime>
+    </File>
+    <File Include="Assets/images/list-style.png">
+      <publishTime>09/08/2020 15:28:37</publishTime>
+    </File>
+    <File Include="Assets/images/mess.png">
+      <publishTime>09/11/2020 15:19:32</publishTime>
+    </File>
+    <File Include="Assets/images/service1.jpg">
+      <publishTime>09/09/2020 00:10:57</publishTime>
+    </File>
+    <File Include="Assets/images/service2.jpg">
+      <publishTime>09/09/2020 00:11:38</publishTime>
+    </File>
+    <File Include="Assets/images/slide1.jpg">
+      <publishTime>09/08/2020 16:18:37</publishTime>
+    </File>
+    <File Include="Assets/images/slide2.jpg">
+      <publishTime>09/08/2020 16:19:07</publishTime>
+    </File>
+    <File Include="Assets/images/slide3.jpg">
+      <publishTime>09/08/2020 16:20:25</publishTime>
+    </File>
+    <File Include="Assets/images/slide4.jpg">
+      <publishTime>09/08/2020 16:21:53</publishTime>
+    </File>
+    <File Include="Assets/images/slide5.jpg">
+      <publishTime>09/08/2020 21:05:49</publishTime>
+    </File>
+    <File Include="Assets/images/tcmn-image1-1.jpg">
+      <publishTime>09/15/2020 22:39:58</publishTime>
+    </File>
+    <File Include="Assets/images/tcmn-image1-2.jpg">
+      <publishTime>09/17/2020 11:59:55</publishTime>
+    </File>
+    <File Include="Assets/images/tcmn-image1.jpg">
+      <publishTime>09/08/2020 22:25:43</publishTime>
+    </File>
+    <File Include="Assets/images/tcmn-image10.jpg">
+      <publishTime>09/12/2020 01:02:45</publishTime>
+    </File>
+    <File Include="Assets/images/tcmn-image11.jpg">
+      <publishTime>09/12/2020 01:03:26</publishTime>
+    </File>
+    <File Include="Assets/images/tcmn-image12.jpg">
+      <publishTime>09/12/2020 01:04:22</publishTime>
+    </File>
+    <File Include="Assets/images/tcmn-image2.jpg">
+      <publishTime>09/08/2020 22:25:57</publishTime>
+    </File>
+    <File Include="Assets/images/tcmn-image3.jpg">
+      <publishTime>09/08/2020 22:26:17</publishTime>
+    </File>
+    <File Include="Assets/images/tcmn-image4.jpg">
+      <publishTime>09/08/2020 22:26:47</publishTime>
+    </File>
+    <File Include="Assets/images/tcmn-image5.jpg">
+      <publishTime>09/08/2020 23:24:25</publishTime>
+    </File>
+    <File Include="Assets/images/tcmn-image6.jpg">
+      <publishTime>09/08/2020 23:25:31</publishTime>
+    </File>
+    <File Include="Assets/images/tcmn-image7.jpg">
+      <publishTime>09/08/2020 23:29:09</publishTime>
+    </File>
+    <File Include="Assets/images/tcmn-image8.jpg">
+      <publishTime>09/08/2020 23:30:21</publishTime>
+    </File>
+    <File Include="Assets/images/tcmn-image9.jpg">
+      <publishTime>09/12/2020 01:00:45</publishTime>
+    </File>
+    <File Include="Assets/images/tintuc-image1.jpg">
+      <publishTime>09/09/2020 22:15:13</publishTime>
+    </File>
+    <File Include="Assets/images/tintuc-image2.jpg">
+      <publishTime>09/09/2020 22:26:22</publishTime>
+    </File>
+    <File Include="Assets/images/tintuc-image3.jpg">
+      <publishTime>09/09/2020 22:52:56</publishTime>
+    </File>
+    <File Include="Assets/images/TKmu.pdf">
+      <publishTime>09/16/2020 09:40:30</publishTime>
+    </File>
+    <File Include="Assets/images/zalo.png">
+      <publishTime>09/11/2020 15:14:50</publishTime>
+    </File>
+    <File Include="Assets/js/bootstrap.bundle.js">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/js/bootstrap.bundle.js.map">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/js/bootstrap.bundle.min.js">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/js/bootstrap.bundle.min.js.map">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/js/bootstrap.js">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/js/bootstrap.js.map">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/js/bootstrap.min.js">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/js/bootstrap.min.js.map">
+      <publishTime>08/06/2020 23:08:54</publishTime>
+    </File>
+    <File Include="Assets/js/javascript.js">
+      <publishTime>12/02/2020 00:10:44</publishTime>
+    </File>
+    <File Include="Assets/js/javascript3.js">
+      <publishTime>11/26/2020 17:22:59</publishTime>
+    </File>
+    <File Include="Assets/js/jquery-3.5.1.js">
+      <publishTime>08/27/2020 13:05:24</publishTime>
+    </File>
+    <File Include="Assets/js/owl.carousel.min.js">
+      <publishTime>04/20/2018 20:22:10</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/16/2020 20:38:42</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>04/16/2020 20:38:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>09/05/2018 16:10:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 11:48:56</publishTime>
+    </File>
+    <File Include="bin/PagedList.dll">
+      <publishTime>09/30/2013 17:36:38</publishTime>
+    </File>
+    <File Include="bin/PagedList.Mvc.dll">
+      <publishTime>09/30/2013 18:15:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/28/2018 12:59:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>11/28/2018 13:00:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Deployment.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Razor.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/TrangChuWebsite.dll">
+      <publishTime>12/03/2020 09:04:13</publishTime>
+    </File>
+    <File Include="bin/TrangChuWebsite.pdb">
+      <publishTime>12/03/2020 09:04:13</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>09/26/2020 21:14:25</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>09/26/2020 21:14:25</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>09/26/2020 21:14:25</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>09/26/2020 21:14:25</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>09/26/2020 21:14:25</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>09/26/2020 21:14:25</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>09/26/2020 21:14:25</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>09/26/2020 21:14:25</publishTime>
+    </File>
+    <File Include="Content/PagedList.css">
+      <publishTime>10/02/2020 13:01:09</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>09/26/2020 21:14:17</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>09/26/2020 21:14:25</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>09/26/2020 21:14:25</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>09/26/2020 21:14:25</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>09/26/2020 21:14:24</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>09/26/2020 21:14:24</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>09/26/2020 19:52:33</publishTime>
+    </File>
+    <File Include="images/adv1.jpg">
+      <publishTime>09/18/2020 01:25:43</publishTime>
+    </File>
+    <File Include="images/adv2.jpg">
+      <publishTime>09/18/2020 01:28:40</publishTime>
+    </File>
+    <File Include="images/adv3.jpg">
+      <publishTime>09/18/2020 01:29:18</publishTime>
+    </File>
+    <File Include="images/adv4.jpg">
+      <publishTime>09/18/2020 01:30:31</publishTime>
+    </File>
+    <File Include="images/avatar-placeholder.png">
+      <publishTime>11/15/2020 12:32:47</publishTime>
+    </File>
+    <File Include="images/backup sql.png">
+      <publishTime>09/15/2020 20:55:30</publishTime>
+    </File>
+    <File Include="images/banner-image1.jpg">
+      <publishTime>09/07/2020 21:58:10</publishTime>
+    </File>
+    <File Include="images/banner-image2.jpg">
+      <publishTime>09/07/2020 21:27:42</publishTime>
+    </File>
+    <File Include="images/banner-image3.jpg">
+      <publishTime>09/07/2020 21:25:43</publishTime>
+    </File>
+    <File Include="images/banner-image4.jpg">
+      <publishTime>09/07/2020 21:41:07</publishTime>
+    </File>
+    <File Include="images/Banner-logo.jpg">
+      <publishTime>09/07/2020 21:04:17</publishTime>
+    </File>
+    <File Include="images/facebook.png">
+      <publishTime>09/11/2020 15:15:17</publishTime>
+    </File>
+    <File Include="images/list-style.png">
+      <publishTime>09/08/2020 15:28:37</publishTime>
+    </File>
+    <File Include="images/mess.png">
+      <publishTime>09/11/2020 15:19:32</publishTime>
+    </File>
+    <File Include="images/service1.jpg">
+      <publishTime>09/09/2020 00:10:57</publishTime>
+    </File>
+    <File Include="images/service2.jpg">
+      <publishTime>09/09/2020 00:11:38</publishTime>
+    </File>
+    <File Include="images/slide1.jpg">
+      <publishTime>09/08/2020 16:18:37</publishTime>
+    </File>
+    <File Include="images/slide2.jpg">
+      <publishTime>09/08/2020 16:19:07</publishTime>
+    </File>
+    <File Include="images/slide3.jpg">
+      <publishTime>09/08/2020 16:20:25</publishTime>
+    </File>
+    <File Include="images/slide4.jpg">
+      <publishTime>09/08/2020 16:21:53</publishTime>
+    </File>
+    <File Include="images/slide5.jpg">
+      <publishTime>09/08/2020 21:05:49</publishTime>
+    </File>
+    <File Include="images/tcmn-image1-1.jpg">
+      <publishTime>09/15/2020 22:39:58</publishTime>
+    </File>
+    <File Include="images/tcmn-image1-2.jpg">
+      <publishTime>09/17/2020 11:59:55</publishTime>
+    </File>
+    <File Include="images/tcmn-image1.jpg">
+      <publishTime>09/08/2020 22:25:43</publishTime>
+    </File>
+    <File Include="images/tcmn-image10.jpg">
+      <publishTime>09/12/2020 01:02:45</publishTime>
+    </File>
+    <File Include="images/tcmn-image11.jpg">
+      <publishTime>09/12/2020 01:03:26</publishTime>
+    </File>
+    <File Include="images/tcmn-image12.jpg">
+      <publishTime>09/12/2020 01:04:22</publishTime>
+    </File>
+    <File Include="images/tcmn-image2.jpg">
+      <publishTime>09/08/2020 22:25:57</publishTime>
+    </File>
+    <File Include="images/tcmn-image3.jpg">
+      <publishTime>09/08/2020 22:26:17</publishTime>
+    </File>
+    <File Include="images/tcmn-image4.jpg">
+      <publishTime>09/08/2020 22:26:47</publishTime>
+    </File>
+    <File Include="images/tcmn-image5.jpg">
+      <publishTime>09/08/2020 23:24:25</publishTime>
+    </File>
+    <File Include="images/tcmn-image6.jpg">
+      <publishTime>09/08/2020 23:25:31</publishTime>
+    </File>
+    <File Include="images/tcmn-image7.jpg">
+      <publishTime>09/08/2020 23:29:09</publishTime>
+    </File>
+    <File Include="images/tcmn-image8.jpg">
+      <publishTime>09/08/2020 23:30:21</publishTime>
+    </File>
+    <File Include="images/tcmn-image9.jpg">
+      <publishTime>09/12/2020 01:00:45</publishTime>
+    </File>
+    <File Include="images/tintuc-image1.jpg">
+      <publishTime>09/09/2020 22:15:13</publishTime>
+    </File>
+    <File Include="images/tintuc-image2.jpg">
+      <publishTime>09/09/2020 22:26:22</publishTime>
+    </File>
+    <File Include="images/tintuc-image3.jpg">
+      <publishTime>09/09/2020 22:52:56</publishTime>
+    </File>
+    <File Include="images/TKmu.pdf">
+      <publishTime>09/16/2020 09:40:30</publishTime>
+    </File>
+    <File Include="images/zalo.png">
+      <publishTime>09/11/2020 15:14:50</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>09/26/2020 21:14:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>09/26/2020 21:14:24</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.js">
+      <publishTime>09/26/2020 21:14:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.js">
+      <publishTime>09/26/2020 21:14:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.map">
+      <publishTime>09/26/2020 21:14:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.js">
+      <publishTime>09/26/2020 21:14:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.min.js">
+      <publishTime>09/26/2020 21:14:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.min.map">
+      <publishTime>09/26/2020 21:14:31</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.8.3.js">
+      <publishTime>09/26/2020 21:14:34</publishTime>
+    </File>
+    <File Include="Views/Account/AccountInfor.cshtml">
+      <publishTime>12/02/2020 02:28:01</publishTime>
+    </File>
+    <File Include="Views/Account/DetailLogin.cshtml">
+      <publishTime>11/10/2020 15:15:08</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>11/09/2020 14:52:31</publishTime>
+    </File>
+    <File Include="Views/Account/MyCheckout.cshtml">
+      <publishTime>12/03/2020 08:40:08</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>11/19/2020 13:45:41</publishTime>
+    </File>
+    <File Include="Views/Cart/Index.cshtml">
+      <publishTime>11/23/2020 22:50:01</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>12/01/2020 14:37:55</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>11/26/2020 17:15:12</publishTime>
+    </File>
+    <File Include="Views/News/Detail.cshtml">
+      <publishTime>12/01/2020 00:05:57</publishTime>
+    </File>
+    <File Include="Views/News/ListNews.cshtml">
+      <publishTime>11/02/2020 22:02:19</publishTime>
+    </File>
+    <File Include="Views/Product/AJaxSearch.cshtml">
+      <publishTime>11/08/2020 09:50:18</publishTime>
+    </File>
+    <File Include="Views/Product/ChiTietSanPham.cshtml">
+      <publishTime>11/30/2020 07:35:02</publishTime>
+    </File>
+    <File Include="Views/Product/FilterPrice.cshtml">
+      <publishTime>11/20/2020 20:19:58</publishTime>
+    </File>
+    <File Include="Views/Product/Index.cshtml">
+      <publishTime>11/26/2020 18:46:20</publishTime>
+    </File>
+    <File Include="Views/Product/PhanLoaiSanPham.cshtml">
+      <publishTime>11/26/2020 17:19:43</publishTime>
+    </File>
+    <File Include="Views/Product/Search.cshtml">
+      <publishTime>11/14/2020 00:06:12</publishTime>
+    </File>
+    <File Include="Views/Product/Wishlist.cshtml">
+      <publishTime>11/23/2020 23:01:37</publishTime>
+    </File>
+    <File Include="Views/Shared/Banner.cshtml">
+      <publishTime>11/09/2020 14:21:47</publishTime>
+    </File>
+    <File Include="Views/Shared/Catogory.cshtml">
+      <publishTime>10/27/2020 16:22:46</publishTime>
+    </File>
+    <File Include="Views/Shared/Footer.cshtml">
+      <publishTime>11/20/2020 18:04:37</publishTime>
+    </File>
+    <File Include="Views/Shared/Header.cshtml">
+      <publishTime>11/26/2020 23:45:40</publishTime>
+    </File>
+    <File Include="Views/Shared/Menu.cshtml">
+      <publishTime>11/30/2020 23:52:02</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayouChiTiet.cshtml">
+      <publishTime>11/24/2020 22:57:29</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>11/24/2020 23:13:33</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutTrong.cshtml">
+      <publishTime>11/24/2020 22:57:14</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>09/26/2020 19:52:34</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>09/27/2020 21:16:15</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/03/2020 09:04:16</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

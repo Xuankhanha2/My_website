@@ -1,0 +1,70 @@
+﻿@{
+    //load file _Layout.cshtml vao day
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@using TrangChuWebsite.Models
+<div class="add_user">
+    <style>
+        .add_user {
+            background-color: white;
+            width: 90%;
+            margin: auto;
+            padding-left: 25px;
+            padding-top: 20px;
+        }
+
+        label {
+            display: block;
+            color: black;
+        }
+
+        .txt {
+            border: 1px solid #ebebeb;
+            width: 80%;
+            display: block;
+            padding: 3px;
+        }
+
+        .btn {
+            padding: 5px 10px;
+            margin: 15px 0px;
+            color: white;
+        }
+        .txtarea {
+            width: 80%;
+            display: block;
+            padding: 3px;
+            border: 1px solid #ebebeb;
+        }
+        input{
+            display: block;
+        }
+    </style>
+    <form action="/Admin/News/Update/@Model["id"]" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+        <label>Title</label>
+        <input type="text" name="name" value="@if (Model != null) {<text>@Model["name"]</text>}" class="txt" id="name">
+
+        <label>Description</label>
+        <textarea name="description" class="txtarea" id="description">@if (Model != null) {<text>@Model["description"]</text>}</textarea>
+        <script language="javascript">
+            CKEDITOR.replace("description");
+        </script>
+
+        <label>Content</label>
+        <textarea name="content" class="txtarea" id="content">@if (Model != null) {<text>@Model["content"]</text>}</textarea>
+        <script language="javascript">
+            CKEDITOR.replace("content");
+        </script>
+
+        <label>Hot new</label>
+        <input type="checkbox" class="ckbox" name="hot" @if (Model != null && Model["hot"] == 1) {<text>checked</text>}/>
+
+        <label>Photo</label>
+        <input type="file" name="photo">
+
+        <input type="submit" name="submit" value="Gửi" class="btn btn-primary">
+        <input type="reset" value="reset" class="btn btn-secondary">
+    </form>
+</div>
+

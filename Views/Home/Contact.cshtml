@@ -1,0 +1,107 @@
+﻿@{
+    // Load file _LayoutTrangChu
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .contact-content {
+        margin-top: 20px;
+        display: flex;
+    }
+
+    .catogory {
+        margin: 0px;
+        padding: 0px;
+        width: 300px;
+    }
+
+    .catogory-title {
+        line-height: 35px;
+        background-color: #f99717;
+        border-radius: 5px 5px 0px 0px;
+        padding-left: 15px;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .catogory-content {
+        margin: 0px;
+        padding: 0px;
+        width: 300px;
+        border: 1px solid #f99717;
+        padding-bottom: 5px;
+        border-radius: 0px 0px 5px 5px;
+        text-align: center;
+    }
+
+    .support {
+        font-size: 18px;
+        font-weight: 600;
+        color: blueviolet;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+    .bubble{
+        z-index: 1000;
+    }
+    .map {
+        width: 600px;
+        height: 600px;
+        margin: 0px 20px;
+        position: relative;
+    }
+    .map iframe{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .address {
+        width: 260px;
+        margin: 0px;
+        padding: 15px 20px;
+        box-shadow: 1px 1px 1px 1px;
+        background-color: cyan;
+        height: 150px;
+    }
+
+        .address h4 {
+            color: darkred;
+        }
+
+        .address p {
+            color: brown;
+            text-decoration: none;
+            padding-left: 20px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .address p:hover{
+            color:limegreen;
+        }
+</style>
+<div class="home-content">
+    <div class="contact-content">
+        <div class="catogory">
+            <div class="catogory-title">
+                <i class="fas fa-question-circle"></i> HỖ TRỢ KHÁCH HÀNG
+            </div>
+            <div class="catogory-content">
+                <div class="support">Hỗ trợ trực tuyến</div>
+                <p><i class="fas fa-phone"></i> 19001070</p>
+                <div class="support">Gửi phản hồi qua email</div>
+                <p><i class="far fa-envelope"></i> freshfood24h@gmail.com</p>
+            </div>
+        </div>
+        <div class="map">
+            <iframe id="map1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.4916343366604!2d105.7406026149556!3d21.05301759232558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454f0d793dccb%3A0xdc7d17921b917e6d!2zTmfDtSAxMzYgxJHGsOG7nW5nIEPhuqd1IERp4buFbiwgTWluaCBLaGFpLCBC4bqvYyBU4burIExpw6ptLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1605710452900!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe id="map2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.497551639819!2d106.67464151483658!3d10.773152762199905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f20a4611011%3A0x16fdef794ad27766!2sViet%20Nam%20Hieu%20Hoc%20Group!5e0!3m2!1svi!2sus!4v1606806507203!5m2!1svi!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <div class="address">
+            <h4>Địa chỉ</h4>
+            <p id="show1">Bắc Từ Liêm - Hà Nội</p>
+            <p id="show2">Quận 10 - TP. HCM</p>
+        </div>
+    </div>
+</div>
+
+  

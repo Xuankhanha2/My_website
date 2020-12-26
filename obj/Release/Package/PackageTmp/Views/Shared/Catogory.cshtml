@@ -1,0 +1,26 @@
+﻿@using TrangChuWebsite.Models;
+@functions{
+    DataContext db = new DataContext();
+    public List<Category> GetCategories()
+    {
+        List<Category> listRecord = db.Categories.Where(tbl => tbl.parent_id == 0).ToList();
+        return listRecord;
+    }
+}
+<div class="catogory">
+    <div class="catogory-title">
+        <i class="fas fa-carrot"></i> DANH MỤC SẢN PHẨM
+    </div>
+    <div class="catogory-content">
+        <ul>
+            @{ 
+                List<Category> list = GetCategories();
+            }
+            @foreach(Category item in list)
+            {
+                <li><a href="/Product/PhanLoaiSanPham/@item.id"><i class="fab fa-envira"></i> @item.tensanpham</a></li>
+            }
+            
+        </ul>
+    </div>
+</div>
