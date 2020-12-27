@@ -2797,6 +2797,7 @@
     <Content Include="Views\Product\Wishlist.cshtml" />
     <Content Include="Views\Account\AccountInfor.cshtml" />
     <Content Include="Views\Account\MyCheckout.cshtml" />
+    <Content Include="Views\Cart\Cart_update.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

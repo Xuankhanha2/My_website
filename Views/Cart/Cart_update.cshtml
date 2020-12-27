@@ -1,0 +1,31 @@
+﻿@{ 
+    Layout = null;
+}
+@using TrangChuWebsite.Models
+<div class="san-pham-duoc-them">
+    <table class="list-product">
+        <tr>
+            <th>Hình ảnh</th>
+            <th>Tên hàng</th>
+            <th>Đơn giá</th>
+            <th>Số lượng</th>
+            <th>Thành tiền</th>
+            <th> </th>
+        </tr>
+        @foreach (CartItem item in Model)
+        {
+
+            <tr>
+                <td><img src="~/Assets/Upload/Products/@item.photo" alt=""></td>
+                <td><a href="/Product/ChiTietSanPham/@item.id">@item.name</a></td>
+                <td>@item.price ₫</td>
+                <td><input type="number" min="1" id="numb_@item.id" name="product_@item.id" value="@item.number" onchange="changePrice(@item.id)" onkeyup="changePrice(@item.id)"></td>
+                <td>@item.toPrice ₫</td>
+                <td valign="top" class="delete-product"><a href="/Cart/Remove/@item.id"><i class="fas fa-times"></i></a></td>
+            </tr>
+        }
+    </table>
+    <input type="button" value="Cập nhật giỏ hàng" class="btn btn-dark" />
+    <a href="/Cart/Clear"><div class="btn btn-primary">Xóa toàn bộ</div></a>
+</div>
+

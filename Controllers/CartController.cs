@@ -27,7 +27,7 @@ namespace TrangChuWebsite.Controllers
         {
             int _id = id;
             var record = db.Products.Where(tbl => tbl.id == _id).FirstOrDefault();
-            if(record != null)
+            if (record != null)
             {
                 CartItem item = new CartItem();
                 item.id = record.id;
@@ -48,22 +48,15 @@ namespace TrangChuWebsite.Controllers
             objCart.CartDelete(id);
             return RedirectToAction("Index");
         }
-        public ActionResult Update()
+        public ActionResult Update(int id)
         {
-            if(Session["Cart"] != null)
-            {
-                List<CartItem> Cart = new List<CartItem>();
-                Cart = Session["Cart"] as List<CartItem>;
-                
-                foreach(var item in Cart)
-                {
-                    string cartQuantity = "product_" + item.id;
-                    int number = Convert.ToInt32(Request.Form[cartQuantity]);
-                    ShoppingCart objCart = new ShoppingCart();
-                    objCart.CartUpdate(item.id, number);
-                }
-            }
-            return RedirectToAction("Index");
+            List<CartItem> Cart = new List<CartItem>();
+            int number = Convert.ToInt32(Request.QueryString["number"]);
+            //Khai bao doi tuong shopping de lay CartItem
+            ShoppingCart objCart = new ShoppingCart();
+            objCart.CartUpdate(id, number);
+            Cart = Session["Cart"] as List<CartItem>;
+            return View("Cart_update", Cart);
         }
 
         //Xoa toan bo gio hang
