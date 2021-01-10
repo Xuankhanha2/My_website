@@ -1,7 +1,6 @@
 ﻿@{
     Layout = null;
 }
-@using TrangChuWebsite.Models
 <div class="giohang-left">
     <!-- drop-box -->
     <div class="san-pham-duoc-them">
@@ -14,20 +13,11 @@
                 <th>Thành tiền</th>
                 <th> </th>
             </tr>
-            @foreach (CartItem item in Model)
-            {
-                <tr>
-                    <td><img src="~/Assets/Upload/Products/@item.photo" alt=""></td>
-                    <td><a href="/Product/ChiTietSanPham/@item.id">@item.name</a></td>
-                    <td>@item.price ₫</td>
-                    @* dùng @item.id để dánh  cho name để nhận diện được ô số lượng đấy là của mặt hàng nào *@
-                    <td>
-                        <input type="number" min="1" id="numb_@item.id" name="product_@item.id" value="@item.number" style="width: 50px" onchange="changePrice(@item.id);">
-                    </td>
-                    <td>@item.toPrice ₫</td>
-                    <td valign="top" class="delete-product"><a href="javascript: Delete_Load(@item.id)"><i class="fas fa-times"></i></a></td>
-                </tr>
-            }
+            <tr>
+                <td colspan="5">
+                    Chưa có mặt hàng nào.
+                </td>
+            </tr>
         </table>
         <a href="/Home" class="btn btn-dark">Tiếp tục mua hàng</a>
         <a href="/Cart/Clear"><div class="btn btn-primary">Xóa toàn bộ</div></a>
@@ -46,13 +36,11 @@
             <br>
             <input type="radio" name="address"> <label>Quận 10 - TP. HCM</label>
         </form>
-        @{
-            ShoppingCart obj = new ShoppingCart();
-        }
-        <h4>Thành tiền: <span id="total">@obj.CartTotal() ₫</span></h4>
+        
+        <h4>Thành tiền: <span id="total">0 ₫</span></h4>
     </div>
     <a href="/Cart/Checkout"><div class="btn-danger thanhtoan">Thanh toán</div></a>
 </div>
 <script>
-    document.getElementById("count_sp").innerHTML = "(có @Model.Count sản phẩm)"
+    document.getElementById("count_sp").innerHTML = "(có 0 sản phẩm)"
 </script>

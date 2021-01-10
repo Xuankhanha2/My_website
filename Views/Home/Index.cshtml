@@ -77,7 +77,7 @@
                         <div class="sale">-@item.discount%</div>
                         }
                         <a href="/Product/AddWishlist/@item.id?customer_id=@Convert.ToInt32(this.Session["Customer_id"])" class="wishlist"><i class="far fa-heart"></i></a>
-                        <a href="/Cart/Add/@item.id"><div class="buy btn-primary">Mua hàng</div></a>
+                        <a href="javascript: UpdateCart(@item.id)"><div class="buy btn-primary">Mua hàng</div></a>
                     </li>
                 }
             </ul>
@@ -112,13 +112,12 @@
                         <h2>@item.price đ</h2>
                         <p>@priceDiscount(item.price, item.discount) ₫</p>
                         <a href="/Product/AddWishlist/@item.id?customer_id=@Convert.ToInt32(this.Session["Customer_id"])" class="wishlist"><i class="far fa-heart"></i></a>
-                        <a href="/Cart/Add/@item.id"><div class="buy btn-primary">Mua hàng</div></a>
+                        <a href="javascript: UpdateCart(@item.id)"><div class="buy btn-primary">Mua hàng</div></a>
                     </li>
                 }
             </ul>
         </div>
     </div>
-
     <div class="dich-vu-title">
         <p>CHÍNH SÁCH</p>
         <hr>
@@ -162,3 +161,15 @@
     </div>
     <!-- /Tin tuc -->
 </div>
+<script src="~/Assets/js/jquery-3.5.1.js"></script>
+<script>
+    function UpdateCart(id) {
+        $.ajax({
+            url: "/Cart/Add/" + id,
+            success: function (result) {
+                $("#count_cart").empty();
+                $("#count_cart").append(result);
+            }
+        })
+    }
+</script>

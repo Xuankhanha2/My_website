@@ -134,42 +134,40 @@
         <!-- /Khoi trai -->
         <!-- Khoi phai -->
         <div class="ctsp-right">
-            <form action="/Cart/Add/@Model.id">
-                <div class="thongtin-sp">
-                    <h1>@Model.name</h1>
-                    <div class="sao">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h2>@Model.price<sup>₫</sup></h2>
-                    <div class="detail" style="min-height: 70px">
-                        @Html.Raw(Model.description)
-                    </div>
-                    <div>
-                        <a href="/Product/AddWishlist/@Model.id?customer_id=@Convert.ToInt32(this.Session["Customer_id"])" style="text-decoration: none !important;"><i class="far fa-heart"></i> Add Wishlist</a>
-                    </div>
-                    <div class="tinh-trang">
-                        Tình trạng:
-                        @if (Convert.ToInt32(Model.content) == 1)
-                        {
-                            <span>còn hàng <i class="far fa-check-circle"></i></span>
-                        }
-                        else
-                        {
-                            <span style="color: red !important;">Hết hàng <i class="far fa-times-circle"></i></span>
-                        }
-                    </div>
-                    <div class="so-luong">
-                        <input type="button" id="btn-tru" value="-">
-                        <input type="text" name="number" id="soluong" value="1" size="1">
-                        <input type="button" id="btn-cong" value="+">
-                    </div>
-                    <a href="$" style="text-decoration: none;"><input type="submit" class="btn btn-block btn-success" style="font-size: 20px" value="Mua hàng"></a>
+            <div class="thongtin-sp">
+                <h1>@Model.name</h1>
+                <div class="sao">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
-            </form>
+                <h2>@Model.price<sup>₫</sup></h2>
+                <div class="detail" style="min-height: 70px">
+                    @Html.Raw(Model.description)
+                </div>
+                <div>
+                    <a href="/Product/AddWishlist/@Model.id?customer_id=@Convert.ToInt32(this.Session["Customer_id"])" style="text-decoration: none !important;"><i class="far fa-heart"></i> Add Wishlist</a>
+                </div>
+                <div class="tinh-trang">
+                    Tình trạng:
+                    @if (Convert.ToInt32(Model.content) == 1)
+                    {
+                        <span>còn hàng <i class="far fa-check-circle"></i></span>
+                    }
+                    else
+                    {
+                        <span style="color: red !important;">Hết hàng <i class="far fa-times-circle"></i></span>
+                    }
+                </div>
+                <div class="so-luong">
+                    <input type="button" id="btn-tru" value="-">
+                    <input type="text" name="number" id="soluong" value="1" size="1">
+                    <input type="button" id="btn-cong" value="+">
+                </div>
+                <input type="submit" class="btn btn-block btn-success" style="font-size: 20px" onclick="UpdateCart(@Model.id)" value="Mua hàng">
+            </div>
             <div class="sub-page">
                 <div class="tu-khoa">từ khóa: <a href="#">hoa quả</a></div>
                 <div class="page">
@@ -236,7 +234,7 @@
             </div>
             <!-- danh gia -->
             <div class="mota-title">Đánh giá</div>
-            <form action="/Product/Rating/@Model.id" method="post">
+            <form action="" method="post">
                 @Html.AntiForgeryToken()
                 <div class="danhgia">
                     <div class="danhgia-title">Đánh giá cho Nho đỏ không hạt Úc</div>
@@ -360,3 +358,15 @@
     <!-- chi tiet san pham -->
 </div>
 <script src="~/Assets/js/jquery-3.5.1.js"></script>
+<script>
+    function UpdateCart(id) {
+        var number = document.getElementById("soluong").value;
+        $.ajax({
+            url: "/Cart/Add/" + id + "?num=" + number,
+            success: function (result) {
+                $("#count_cart").empty();
+                $("#count_cart").append(result);
+            }
+        })
+    }
+</script>

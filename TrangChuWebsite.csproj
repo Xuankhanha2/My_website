@@ -2503,7 +2503,6 @@
     <Content Include="Assets\js\bootstrap.js.map" />
     <Content Include="Assets\js\bootstrap.min.js.map" />
     <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\Assets\fonts\poppins\poppins-v5-latin-100.eot" />
     <Content Include="Areas\Admin\Assets\fonts\poppins\poppins-v5-latin-100.ttf" />
@@ -2611,7 +2610,6 @@
     <Content Include="Areas\Admin\Views\Login\loging.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_login_bg.cshtml" />
     <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Users\Read.cshtml" />
     <Content Include="Areas\Admin\Views\Users\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Category\Read.cshtml" />
@@ -2713,6 +2711,10 @@
     <Content Include="fonts\fontawesome\webfonts\fa-solid-900.ttf" />
     <Content Include="fonts\fontawesome\webfonts\fa-solid-900.woff" />
     <Content Include="fonts\fontawesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\AddressSite\Read.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\SlideManagement\Index.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -2727,12 +2729,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Attr\CheckLogin.cs" />
+    <Compile Include="Areas\Admin\Controllers\AddressSiteController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\CustomersController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\NewsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SlideManagementController.cs" />
     <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
@@ -2743,6 +2747,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Database.cs" />
@@ -2798,6 +2803,9 @@
     <Content Include="Views\Account\AccountInfor.cshtml" />
     <Content Include="Views\Account\MyCheckout.cshtml" />
     <Content Include="Views\Cart\Cart_update.cshtml" />
+    <Content Include="Views\Cart\Clear.cshtml" />
+    <Content Include="Views\Cart\NumberCart.cshtml" />
+    <Content Include="Views\Cart\NumberReload.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

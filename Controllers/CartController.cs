@@ -23,48 +23,68 @@ namespace TrangChuWebsite.Controllers
                 Cart = Session["Cart"] as List<CartItem>;
             return View("Index", Cart);
         }
-        public ActionResult Add(int id)
+        public ActionResult Add(int id, int? num)
         {
             int _id = id;
             var record = db.Products.Where(tbl => tbl.id == _id).FirstOrDefault();
+
             if (record != null)
             {
                 CartItem item = new CartItem();
                 item.id = record.id;
                 item.name = record.name;
                 item.price = Convert.ToInt32(record.price);
-                item.number = 1;
+                item.number = num ?? 1;
                 item.photo = record.photo;
                 ShoppingCart objCart = new ShoppingCart();
                 objCart.CartAdd(item);
             }
-            return RedirectToAction("Index");
+            List<CartItem> Cart = new List<CartItem>();
+            Cart = Session["Cart"] as List<CartItem>;
+            return View("NumberCart", Cart);
         }
         //Xoa mat hang traong gio hang
         public ActionResult Remove(int id)
         {
+            List<CartItem> Cart = new List<CartItem>();
             int _id = id;
             ShoppingCart objCart = new ShoppingCart();
             objCart.CartDelete(id);
-            return RedirectToAction("Index");
+            Cart = Session["Cart"] as List<CartItem>;
+            return View("Cart_update", Cart);
         }
         public ActionResult Update(int id)
         {
             List<CartItem> Cart = new List<CartItem>();
-            int number = Convert.ToInt32(Request.QueryString["number"]);
-            //Khai bao doi tuong shopping de lay CartItem
-            ShoppingCart objCart = new ShoppingCart();
-            objCart.CartUpdate(id, number);
-            Cart = Session["Cart"] as List<CartItem>;
-            return View("Cart_update", Cart);
+            try
+            {
+                int number = Convert.ToInt32(Request.QueryString["number"]);
+                //Khai bao doi tuong shopping de lay CartItem
+                ShoppingCart objCart = new ShoppingCart();
+                objCart.CartUpdate(id, number);
+                Cart = Session["Cart"] as List<CartItem>;
+                return View("Cart_update", Cart);
+            }
+            catch
+            {
+                return RedirectToAction("#");
+            }
         }
 
         //Xoa toan bo gio hang
         public ActionResult Clear()
         {
-            ShoppingCart objCart = new ShoppingCart();
-            objCart.CartDestroy();
-            return RedirectToAction("Index");
+                ShoppingCart objCart = new ShoppingCart();
+                objCart.CartDestroy();
+                return View("Clear");
+        }
+
+        //
+        public ActionResult NumberReload()
+        {
+            List<CartItem> Cart = new List<CartItem>();
+            Cart = Session["Cart"] as List<CartItem>;
+            return View("NumberReload", Cart);
         }
         public ActionResult Checkout()
         {

@@ -194,6 +194,21 @@ body{
     color: white;
     margin-left: 5px;
 }
+    .gio-hang #count_cart {
+        margin: 0px;
+        padding: 0px;
+        background-color: red;
+        width: 15px;
+        height: 15px;
+        text-align: center;
+        color: white;
+        font-size: 11px;
+        position: absolute;
+        line-height: 18px;
+        border-radius: 18px;
+        top: -5px;
+        right: 0px;
+    }
 /* end banner */
 /* Main menu */
  .main-menu{

@@ -221,8 +221,64 @@ C:\Users\VU_XUAN_KHANH\OneDrive\May tinh\Máy tính\fresh_food-master\fresh_food
 C:\Users\VU_XUAN_KHANH\OneDrive\May tinh\Máy tính\fresh_food-master\fresh_food-master\bin\System.Web.Helpers.xml
 C:\Users\VU_XUAN_KHANH\OneDrive\May tinh\Máy tính\fresh_food-master\fresh_food-master\bin\System.Web.Mvc.xml
 C:\Users\VU_XUAN_KHANH\OneDrive\May tinh\Máy tính\fresh_food-master\fresh_food-master\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\VU_XUAN_KHANH\OneDrive\May tinh\Máy tính\fresh_food-master\fresh_food-master\obj\Debug\TrangChuWebsite.csprojAssemblyReference.cache
 C:\Users\VU_XUAN_KHANH\OneDrive\May tinh\Máy tính\fresh_food-master\fresh_food-master\obj\Debug\TrangChuWebsite.csproj.CoreCompileInputs.cache
 C:\Users\VU_XUAN_KHANH\OneDrive\May tinh\Máy tính\fresh_food-master\fresh_food-master\obj\Debug\TrangChuWebsite.csproj.CopyComplete
 C:\Users\VU_XUAN_KHANH\OneDrive\May tinh\Máy tính\fresh_food-master\fresh_food-master\obj\Debug\TrangChuWebsite.dll
 C:\Users\VU_XUAN_KHANH\OneDrive\May tinh\Máy tính\fresh_food-master\fresh_food-master\obj\Debug\TrangChuWebsite.pdb
+C:\Users\VU_XUAN_KHANH\OneDrive\May tinh\Máy tính\fresh_food-master\fresh_food-master\obj\Debug\TrangChuWebsite.csprojAssemblyReference.cache
+F:\fresh_food-master\fresh_food-master\bin\TrangChuWebsite.dll.config
+F:\fresh_food-master\fresh_food-master\bin\TrangChuWebsite.dll
+F:\fresh_food-master\fresh_food-master\bin\TrangChuWebsite.pdb
+F:\fresh_food-master\fresh_food-master\bin\roslyn\csc.exe
+F:\fresh_food-master\fresh_food-master\bin\roslyn\csc.exe.config
+F:\fresh_food-master\fresh_food-master\bin\roslyn\csc.rsp
+F:\fresh_food-master\fresh_food-master\bin\roslyn\csi.exe
+F:\fresh_food-master\fresh_food-master\bin\roslyn\csi.rsp
+F:\fresh_food-master\fresh_food-master\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\fresh_food-master\fresh_food-master\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\fresh_food-master\fresh_food-master\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\fresh_food-master\fresh_food-master\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\fresh_food-master\fresh_food-master\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\fresh_food-master\fresh_food-master\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\fresh_food-master\fresh_food-master\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\fresh_food-master\fresh_food-master\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\fresh_food-master\fresh_food-master\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\fresh_food-master\fresh_food-master\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\fresh_food-master\fresh_food-master\bin\roslyn\System.AppContext.dll
+F:\fresh_food-master\fresh_food-master\bin\roslyn\System.Collections.Immutable.dll
+F:\fresh_food-master\fresh_food-master\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\fresh_food-master\fresh_food-master\bin\roslyn\System.IO.FileSystem.dll
+F:\fresh_food-master\fresh_food-master\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\fresh_food-master\fresh_food-master\bin\roslyn\System.Reflection.Metadata.dll
+F:\fresh_food-master\fresh_food-master\bin\roslyn\vbc.exe
+F:\fresh_food-master\fresh_food-master\bin\roslyn\vbc.exe.config
+F:\fresh_food-master\fresh_food-master\bin\roslyn\vbc.rsp
+F:\fresh_food-master\fresh_food-master\bin\roslyn\VBCSCompiler.exe
+F:\fresh_food-master\fresh_food-master\bin\roslyn\VBCSCompiler.exe.config
+F:\fresh_food-master\fresh_food-master\bin\EntityFramework.dll
+F:\fresh_food-master\fresh_food-master\bin\EntityFramework.SqlServer.dll
+F:\fresh_food-master\fresh_food-master\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\fresh_food-master\fresh_food-master\bin\Microsoft.Web.Infrastructure.dll
+F:\fresh_food-master\fresh_food-master\bin\PagedList.dll
+F:\fresh_food-master\fresh_food-master\bin\PagedList.Mvc.dll
+F:\fresh_food-master\fresh_food-master\bin\System.Web.Helpers.dll
+F:\fresh_food-master\fresh_food-master\bin\System.Web.Mvc.dll
+F:\fresh_food-master\fresh_food-master\bin\System.Web.Razor.dll
+F:\fresh_food-master\fresh_food-master\bin\System.Web.Webpages.Deployment.dll
+F:\fresh_food-master\fresh_food-master\bin\System.Web.Webpages.dll
+F:\fresh_food-master\fresh_food-master\bin\System.Web.Webpages.Razor.dll
+F:\fresh_food-master\fresh_food-master\bin\EntityFramework.xml
+F:\fresh_food-master\fresh_food-master\bin\EntityFramework.SqlServer.xml
+F:\fresh_food-master\fresh_food-master\bin\PagedList.xml
+F:\fresh_food-master\fresh_food-master\bin\PagedList.Mvc.xml
+F:\fresh_food-master\fresh_food-master\bin\System.Web.Razor.xml
+F:\fresh_food-master\fresh_food-master\bin\System.Web.Webpages.xml
+F:\fresh_food-master\fresh_food-master\bin\System.Web.Webpages.Deployment.xml
+F:\fresh_food-master\fresh_food-master\bin\System.Web.Webpages.Razor.xml
+F:\fresh_food-master\fresh_food-master\bin\System.Web.Helpers.xml
+F:\fresh_food-master\fresh_food-master\bin\System.Web.Mvc.xml
+F:\fresh_food-master\fresh_food-master\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\fresh_food-master\fresh_food-master\obj\Debug\TrangChuWebsite.csproj.CoreCompileInputs.cache
+F:\fresh_food-master\fresh_food-master\obj\Debug\TrangChuWebsite.csproj.CopyComplete
+F:\fresh_food-master\fresh_food-master\obj\Debug\TrangChuWebsite.dll
+F:\fresh_food-master\fresh_food-master\obj\Debug\TrangChuWebsite.pdb

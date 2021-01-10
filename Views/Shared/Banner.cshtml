@@ -1,4 +1,13 @@
-﻿<div class="banner">
+﻿@using TrangChuWebsite.Models
+@functions{ 
+    public int GetNumCart()
+    {
+        List<CartItem> Cart = new List<CartItem>();
+        Cart = HttpContext.Current.Session["Cart"] as List<CartItem>;
+        return Cart != null ? Cart.Count : 0;
+    }
+}
+<div class="banner">
     <div class="banner-logo">
         <a href="/Admin"><img src="~/Assets/images/Banner-logo.jpg" alt=""></a>
     </div>
@@ -26,9 +35,12 @@
                 </div>
             </li>
         </ul>
+        
         <div class="gio-hang">
             <i class="fas fa-shopping-bag"></i>
             <a href="/Cart/Index">Giỏ hàng</a>
+            <div id="count_cart"><span>@GetNumCart()</span></div>
+
         </div>
     </div>
 </div>

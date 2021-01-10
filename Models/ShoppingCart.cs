@@ -44,7 +44,7 @@ namespace TrangChuWebsite.Models
                 //neu co san pham trong gio hang
                 if (findCartItemCart != null)
                 {
-                    findCartItemCart.number++;
+                    findCartItemCart.number += CartItemCart.number;
                     //gan nguoc lai vao HttpContext.Current.Session cart
                     HttpContext.Current.Session["Cart"] = Cart;
                 }
