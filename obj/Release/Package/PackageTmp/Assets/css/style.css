@@ -182,7 +182,7 @@ body{
 .gio-hang{
     background-color: #f99717;
     position: absolute;
-    z-index: 0px;
+    z-index: 0;
     padding: 0px 10px;
     border-radius: 20px;
     line-height: 30px;
@@ -194,10 +194,26 @@ body{
     text-decoration: none;
     color: white;
     margin-left: 5px;
+    position: relative;
 }
+    .gio-hang #count_cart {
+        margin: 0px;
+        padding: 0px;
+        background-color: red;
+        width: 15px;
+        height: 15px;
+        text-align: center;
+        color: white;
+        font-size: 11px;
+        position: absolute;
+        line-height: 18px;
+        border-radius: 18px;
+        top: -5px;
+        right: 0px;
+    }
 /* end banner */
 /* Main menu */
- .main-menu{
+.main-menu {
     margin: 0px;
     padding: 0px;
     background-color: #83bb3e;
@@ -335,15 +351,28 @@ body{
     margin: 0px;
     padding: 0px;
     width: 300px;
+    height: 305px;
     border: 1px solid #f99717;
     padding-bottom: 5px;
     border-radius: 0px 0px 5px 5px;
+    overflow-y: scroll;
 }
-.catogory-content ul{
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
+.catogory-content::-webkit-scrollbar{
+    width: 5px;
+    border-radius: 5px;
+    display: none;
 }
+    .catogory-content::-webkit-scrollbar-button {
+        display: none;
+    }
+    .catogory-content::-webkit-scrollbar-thumb{
+        background: darkred;
+    }
+    .catogory-content ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
 .catogory-content ul li{
     line-height: 35px;
     padding-left: 25px;
@@ -353,7 +382,7 @@ body{
 }
 .catogory-content ul li a{
     color: #5c3d21;
-    font-size: 14;
+    font-size: 14px;
     text-decoration: none;
 }
 .catogory-content ul li:hover{
@@ -674,6 +703,8 @@ banner middle
     /* text-align: left; */
     margin-top: 10px;
     height: 125px;
+    overflow: hidden;
+    margin-bottom: 50px;
 }
 .tin-tuc-content ul li p a{
     color: #667766;
@@ -690,6 +721,10 @@ banner middle
     width: 150px;
     margin: 5px auto;
     cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%,0%)
 }
 .chi-tiet:hover{
     background-color: #5c3d21;
@@ -704,6 +739,7 @@ banner middle
     background-color: #83bb3e;
     margin-top: 30px;
     padding-bottom: 20px;
+    color: white;
 }
 .footer-content{
     width: 1200px;
@@ -722,6 +758,7 @@ banner middle
 .ftl-title{
     font-weight: bold;
     font-size: 20px;
+    color: white;
 }
 .ftl-content{
     margin: 0px;
@@ -759,10 +796,10 @@ banner middle
     font-size: 14px;
 }
 .ftm-content ul li a{
-    color: black;
+    color: white;
 }
 .ftm-content ul li a:hover{
-    color: white;
+    color: #5c3d21;
     text-decoration: none;
 }
 .ftr{

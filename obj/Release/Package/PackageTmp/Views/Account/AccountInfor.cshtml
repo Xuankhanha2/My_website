@@ -17,7 +17,7 @@
                 <h1>@Model.name</h1>
             </div>
             <div class="other_infor">
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="" method="post" enctype="multipart/form-data" onsubmit="check()">
                     @Html.AntiForgeryToken()
                     <div>
                         <label>Tên: </label>
@@ -44,3 +44,18 @@
         </div>
     </div>
 </div>
+<script>
+    var b = document.getElementById("phone").value;
+    function check(){
+        var a = document.getElementById("phone").value;
+        reg = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
+        if(reg.test(a) == false){
+            alert("Số điện thoại chưa đúng");
+            document.getElementById("phone").value = b;
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+</script>

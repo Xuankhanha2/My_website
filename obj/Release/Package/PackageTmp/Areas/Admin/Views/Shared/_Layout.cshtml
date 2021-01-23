@@ -88,6 +88,12 @@
                                     <a href="https://www.facebook.com/" target="_blank">Facebook</a>
                                 </li>
                                 <li>
+                                    <a href="#">Change Address</a>
+                                </li>
+                                <li>
+                                    <a href="#">Change slide images</a>
+                                </li>
+                                <li>
                                     <a href="#">Forget Password</a>
                                 </li>
                             </ul>
@@ -107,7 +113,7 @@
                             <form class="form-header" action="" method="POST">
                                 <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
                                 <button class="au-btn--submit" type="submit">
-                                    <i class="zmdi zmdi-search"></i>
+                                    <i class="fas fa-search"></i>
                                 </button>
                             </form>
                             <div class="header-button">
@@ -133,23 +139,9 @@
                                                     <span class="email">@this.Session["email"].ToString()</span>
                                                 </div>
                                             </div>
-                                            <div class="account-dropdown__body">
-                                                <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-account"></i>Account
-                                                    </a>
-                                                </div>
-                                                <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-settings"></i>Setting
-                                                    </a>
-                                                </div>
-                                                <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-money-box"></i>Billing
-                                                    </a>
-                                                </div>
-                                            </div>
+                                            @*<div class="account-dropdown__body">
+
+                                                </div>*@
                                             <div class="account-dropdown__footer">
                                                 <a href="/Admin/Login/Logout">
                                                     <i class="zmdi zmdi-power"></i>Logout
@@ -170,9 +162,9 @@
             </div>
             <!-- END MAIN CONTENT-->
             <!-- END PAGE CONTAINER-->
-            </div>
-
         </div>
+
+    </div>
 
     <!-- Jquery JS-->
     <script src="~/Areas/Admin/Assets/vendor/jquery-3.2.1.min.js"></script>
@@ -197,7 +189,7 @@
     <script src="https://kit.fontawesome.com/d5331f594f.js" crossorigin="anonymous"></script>
     <!-- Main JS-->
     <script src="~/Areas/Admin/Assets/js/main.js"></script>
-    
+
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-﻿@{ 
+﻿@{
     Layout = "~/Views/Shared/_layoutTrong.cshtml";
 }
 @using TrangChuWebsite.Models
@@ -13,7 +13,7 @@
     //lay gia da duoc sale
     public string priceDiscount(double price, int discount)
     {
-        double _price = price - (price*discount )/100;
+        double _price = price - (price * discount) / 100;
         return _price.ToString();
     }
     //Ham lay san pham goi y
@@ -53,37 +53,24 @@
             <li><a href="#"><span>&nbsp;DANH MỤC</span></a></li>
         </ul>
         <div class="filt-price">
-            <form action="/Product/FilterPrice/@ViewBag.id" method="post">
-                @Html.AntiForgeryToken()
-                <label>(Giá) Từ: </label>
-                <input type="text" name="from" id="from" size="15" required/>
-                <label>Đến: </label>
-                <input type="text" name="to" size="15" id="to" required/>
-                <button type="submit" class="btn btn-light" style="height: 30px; border: 1px solid #808080;">Lọc</button>
-            </form>
+            <label>(Giá) Từ: </label>
+            <input type="text" name="price_from" id="from" size="15" required />
+            <label>Đến: </label>
+            <input type="text" name="price_to" id="to" size="15" required />
+            <button class="btn btn-light" style="height: 30px; border: 1px solid #808080;" onclick="filt()">Lọc</button>
         </div>
-        @*<div class="fill">
-            <h2>
-                <i class="fas fa-filter"></i> Lọc sản phẩm
-                <ul>
-                    <li><a href="#">Theo khoảng giá</a></li>
-                    <li><a href="#">Theo mục sản phẩm</a></li>
-                    <li><a href="#">Theo điểm đánh giá</a></li>
-                </ul>
-            </h2>
-        </div>*@
         <div class="sort">
             <label for="">Sắp xếp: </label>
-            @{ 
+            @{
                 string _order = Request.QueryString["order"] != null ? Request.QueryString["order"] : "";
 
             }
             <select name="sort" id="sort" onchange="location.href = '/Product/PhanLoaiSanPham/@ViewBag.id?order=' + this.value;">
                 <option value="0">Sắp xếp</option>
-                <option @if (_order == "priceAsc") {<text> selected</text>} value="priceAsc">Giá tăng dần</option>
-                <option @if (_order == "priceDesc") {<text> selected</text>} value="priceDesc">Giá giảm dần</option>
-                <option @if (_order == "nameAsc") {<text> selected</text>} value="nameAsc">Sắp xếp A-Z</option>
-                <option @if (_order == "nameDesc") {<text> selected</text>} value="nameDesc">Sắp xếp Z-A</option>
+                <option @if (_order == "priceAsc") { <text> selected</text>} value="priceAsc">Giá tăng dần</option>
+                <option @if (_order == "priceDesc") { <text> selected</text>} value="priceDesc">Giá giảm dần</option>
+                <option @if (_order == "nameAsc") { <text> selected</text>} value="nameAsc">Sắp xếp A-Z</option>
+                <option @if (_order == "nameDesc") { <text> selected</text>} value="nameDesc">Sắp xếp Z-A</option>
             </select>
         </div>
     </div>
@@ -95,27 +82,27 @@
             <ul>
                 @foreach (Product item in Model)
                 {
-                <li>
-                    <a href="/Product/ChiTietSanPham/@item.id"><img src="~/Assets/Upload/Products/@item.photo"></a>
-                    <a href="/Product/ChiTietSanPham/@item.id">
-                        <h1>@item.name</h1>
-                    </a>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h2>@item.price đ</h2>
-                    <p>@priceDiscount(item.price, item.discount) ₫</p>
-                    @if(Convert.ToInt32(item.discount) > 0)
-                    {
-                        <div class="sale">-@item.discount%</div>
-                    }
-                    <a href="/Product/AddWishlist/@item.id?customer_id=@Convert.ToInt32(this.Session["Customer_id"])" class="wishlist"><i class="far fa-heart"></i></a>
-                    <a href="/Cart/Add/@item.id"><div class="buy btn-primary">Mua hàng</div></a>
-                </li>
+                    <li>
+                        <a href="/Product/ChiTietSanPham/@item.id"><img src="~/Assets/Upload/Products/@item.photo"></a>
+                        <a href="/Product/ChiTietSanPham/@item.id">
+                            <h1>@item.name</h1>
+                        </a>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h2>@item.price đ</h2>
+                        <p>@priceDiscount(item.price, item.discount) ₫</p>
+                        @if (Convert.ToInt32(item.discount) > 0)
+                        {
+                            <div class="sale">-@item.discount%</div>
+                        }
+                        <a href="/Product/AddWishlist/@item.id?customer_id=@Convert.ToInt32(this.Session["Customer_id"])" class="wishlist"><i class="far fa-heart"></i></a>
+                        <a href="javascript: UpdateCart(@item.id)"><div class="buy btn-primary">Mua hàng</div></a>
+                    </li>
                 }
             </ul>
         </div>
@@ -254,7 +241,7 @@
                             </a>                            <h2>@item.price ₫</h2>
                             <p>@priceDiscount(item.price, item.discount) ₫</p>
                             <a href="/Product/AddWishlist/@item.id?customer_id=@Convert.ToInt32(this.Session["Customer_id"])" class="wishlist"><i class="far fa-heart"></i></a>
-                            <a href="/Cart/Add/@item.id" class="btn btn-primary">Mua hàng</a>
+                            <a href="javascript: UpdateCart(@item.id)" class="btn btn-primary">Mua hàng</a>
                         </div>
                     }
 
@@ -267,3 +254,29 @@
         </div>
     </div>
 </div>
+<script src="~/Assets/js/jquery-3.5.1.js">
+</script>
+<script>
+    function filt(){
+        var _from = document.getElementById("from").value;
+        var _to = document.getElementById("to").value;
+        $.ajax({
+            url: "/Product/FilterPrice/@ViewBag.id?from=" + _from + "&to=" + _to,
+            success: function (result) {
+                $(".trai-cay-moi-ngay").empty();
+                $(".trai-cay-moi-ngay").append(result);
+            }
+        });
+    }
+</script>
+<script>
+    function UpdateCart(id) {
+        $.ajax({
+            url: "/Cart/Add/" + id,
+            success: function (result) {
+                $("#count_cart").empty();
+                $("#count_cart").append(result);
+            }
+        })
+    }
+</script>

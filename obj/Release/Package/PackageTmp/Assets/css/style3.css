@@ -201,7 +201,7 @@ body {
 .gio-hang {
     background-color: #f99717;
     position: absolute;
-    z-index: 0px;
+    z-index: 0;
     padding: 0px 10px;
     border-radius: 20px;
     line-height: 30px;
@@ -214,6 +214,21 @@ body {
         text-decoration: none;
         color: white;
         margin-left: 5px;
+    }
+    .gio-hang #count_cart {
+        margin: 0px;
+        padding: 0px;
+        background-color: red;
+        width: 15px;
+        height: 15px;
+        text-align: center;
+        color: white;
+        font-size: 11px;
+        position: absolute;
+        line-height: 18px;
+        border-radius: 18px;
+        top: -5px;
+        right: 0px;
     }
 /* end banner */
 /* Main menu */
@@ -1110,6 +1125,7 @@ body {
     background-color: #83bb3e;
     margin-top: 30px;
     padding-bottom: 20px;
+    color: white;
 }
 
 .footer-content {
@@ -1132,6 +1148,7 @@ body {
 .ftl-title {
     font-weight: bold;
     font-size: 20px;
+    color: white;
 }
 
 .ftl-content {
@@ -1176,11 +1193,11 @@ body {
         }
 
             .ftm-content ul li a {
-                color: black;
+                color: white;
             }
 
                 .ftm-content ul li a:hover {
-                    color: white;
+                    color: #5c3d21;
                     text-decoration: none;
                 }
 
@@ -1218,4 +1235,4 @@ body {
     background-color: #ff5722;
     height: 60px;
 }
-/* end footer */
+/*end footer*/

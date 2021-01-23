@@ -282,3 +282,4 @@ F:\fresh_food-master\fresh_food-master\obj\Debug\TrangChuWebsite.csproj.CoreComp
 F:\fresh_food-master\fresh_food-master\obj\Debug\TrangChuWebsite.csproj.CopyComplete
 F:\fresh_food-master\fresh_food-master\obj\Debug\TrangChuWebsite.dll
 F:\fresh_food-master\fresh_food-master\obj\Debug\TrangChuWebsite.pdb
+F:\fresh_food-master\fresh_food-master\obj\Debug\TrangChuWebsite.csprojAssemblyReference.cache

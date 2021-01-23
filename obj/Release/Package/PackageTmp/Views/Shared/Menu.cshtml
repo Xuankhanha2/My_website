@@ -34,7 +34,7 @@
                 </li>
                 <li><a href="#">Nhà cung cấp</a></li>
                 <li><a href="/News/listNews">Tin tức</a></li>
-                <li><a href="#">Giới thiệu</a></li>
+                @*<li><a href="#">Giới thiệu</a></li>*@
                 <li><a href="/Home/Contact">Liên hệ</a></li>
             </ul>
         </div>
@@ -84,7 +84,9 @@
 <script>
     function searchForm() {
         $(document).ready(function () {
-
+            $(window).click(function () {
+                $("#smart-search").attr("style", "display: none !important;");
+            })
         })
         var _key = document.getElementById('key').value;
 

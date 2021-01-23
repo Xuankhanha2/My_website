@@ -28,7 +28,7 @@
             else
             {
                 <ul>
-                    <li><a href="/">Xin chào: <i class="fas fa-user-circle"></i> @this.Session["Customer_name"]</a>
+                    <li><a href="/">Xin chào: @this.Session["Customer_name"] <i class="fas fa-user-circle"></i></a>
                         <ul class="sub-account-option">
                             <li><a href="/Account/AccountInfor/@Convert.ToInt32(this.Session["Customer_id"])"><i class="fas fa-user-edit"></i> Thông tin tài khoản</a></li>
                             <li><a href="/Product/Wishlist/@Convert.ToInt32(this.Session["Customer_id"])"><i class="far fa-heart"></i> Sản phẩm ưa thích</a></li>

@@ -1,0 +1,46 @@
+﻿@{
+    Layout = null;
+}
+<div class="giohang-left">
+    <!-- drop-box -->
+    <div class="san-pham-duoc-them">
+        <table class="list-product">
+            <tr>
+                <th>Hình ảnh</th>
+                <th>Tên hàng</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+                <th> </th>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    Chưa có mặt hàng nào.
+                </td>
+            </tr>
+        </table>
+        <a href="/Home" class="btn btn-dark">Tiếp tục mua hàng</a>
+        <a href="/Cart/Clear"><div class="btn btn-primary">Xóa toàn bộ</div></a>
+    </div>
+    <!-- end drop box -->
+</div>
+<div class="giohang-right">
+    <div class="vekhuyenmai">
+        <p>Chọn mã khuyến mại</p>
+        <span><a href="#"><i class="fas fa-ticket-alt"></i> Chọn hoặc nhập mã khuyến mại</a></span>
+    </div>
+    <div class="tongtien">
+        <h4>Chọn khu vực giao hàng</h4>
+        <form class="khuvuc">
+            <input type="radio" name="address"> <label>Bắc Từ Liêm - Hà Nội</label>
+            <br>
+            <input type="radio" name="address"> <label>Quận 10 - TP. HCM</label>
+        </form>
+        
+        <h4>Thành tiền: <span id="total">0 ₫</span></h4>
+    </div>
+    <a href="/Cart/Checkout"><div class="btn-danger thanhtoan">Thanh toán</div></a>
+</div>
+<script>
+    document.getElementById("count_sp").innerHTML = "(có 0 sản phẩm)"
+</script>

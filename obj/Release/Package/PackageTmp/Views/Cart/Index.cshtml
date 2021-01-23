@@ -1,7 +1,7 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayouChiTiet.cshtml";
 }
-@functions{ 
+@functions{
     public int number()
     {
         List<CartItem> list = new List<CartItem>();
@@ -37,29 +37,26 @@
             width: 100%;
         }
 
-    #cell-number {
-        width: 60px;
-        text-align: center;
-    }
+            .giohang-left table img {
+                width: 200px;
+                height: 170px;
+                object-fit: cover;
+                object-position: center;
+            }
 
-    .giohang-left table img {
-        width: 200px;
-        height: 170px;
-        object-fit: cover;
-        object-position: center;
-    }
-    .giohang-left table tr{
-        border-bottom: 1px solid #ebebeb;
-    }
-    .giohang-left table tr th {
-        padding: 10px 10px;
-        background-color: #fef79c;
-    }
+            .giohang-left table tr {
+                border-bottom: 1px solid #ebebeb;
+            }
 
-    .giohang-left table tr td a {
-        font-size: 20px;
-        color: black;
-    }
+                .giohang-left table tr th {
+                    padding: 10px 10px;
+                    background-color: #fef79c;
+                }
+
+                .giohang-left table tr td a {
+                    font-size: 20px;
+                    color: black;
+                }
 
     .giohang-right {
         width: 300px;
@@ -130,44 +127,57 @@
         .delete-product a:hover {
             color: black !important;
         }
-    .btn{
+
+    .btn {
         margin-top: 15px;
     }
 </style>
 <div class="home-content">
-    <h3 class="giohang_title"><i class="fas fa-shopping-cart"></i> GIỎ HÀNG <span>(có @number() sản phẩm)</span></h3>
-    <div class="giohang">
+    <h3 class="giohang_title"><i class="fas fa-shopping-cart"></i> GIỎ HÀNG <span id="count_sp">(có @number() sản phẩm)</span></h3>
+    <div class="giohang" id="content_left">
         <div class="giohang-left">
             <!-- drop-box -->
-            <form action="/Cart/Update" method="post">
-                <div class="san-pham-duoc-them">
-                    <table class="list-product">
-                        <tr>
-                            <th>Hình ảnh</th>
-                            <th>Tên hàng</th>
-                            <th>Đơn giá</th>
-                            <th>Số lượng</th>
-                            <th>Thành tiền</th>
-                            <th> </th>
-                        </tr>
-                        @foreach (CartItem item in Model)
+            <div class="san-pham-duoc-them">
+                <table class="list-product">
+                    <tr>
+                        <th>Hình ảnh</th>
+                        <th>Tên hàng</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                        <th> </th>
+                    </tr>
+                    @if(Model.Count > 0)
+                    {
+                        foreach (CartItem item in Model)
                         {
 
                             <tr>
                                 <td><img src="~/Assets/Upload/Products/@item.photo" alt=""></td>
                                 <td><a href="/Product/ChiTietSanPham/@item.id">@item.name</a></td>
                                 <td>@item.price ₫</td>
-                                <td><input type="number" min="1" id="cell-number" name="product_@item.id" value="@item.number"></td>
+                                @* dùng @item.id để dánh  cho name để nhận diện được ô số lượng đấy là của mặt hàng nào *@
+                                <td>
+                                    <input type="number" min="1" id="numb_@item.id" name="product_@item.id" value="@item.number" style="width: 50px" onchange="changePrice(@item.id); " onkeyup="changePrice(@item.id);">
+                                </td>
                                 <td>@item.toPrice ₫</td>
-                                <td valign="top" class="delete-product"><a href="/Cart/Remove/@item.id"><i class="fas fa-times"></i></a></td>
+                                <td valign="top" class="delete-product"><a href="javascript: Delete_Load(@item.id); UpdateCart();"><i class="fas fa-times"></i></a></td>
                             </tr>
                         }
-                    </table>
-                    <input type="submit" value="Cập nhật giỏ hàng" class="btn btn-dark" />
-                    <a href="/Cart/Clear"><div class="btn btn-primary">Xóa toàn bộ</div></a>
-                </div>
-            </form>
-                <!-- end drop box -->
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5">
+                                Chưa có mặt hàng nào.
+                            </td>
+                        </tr>
+                    }
+                </table>
+                <a href="/Home" class="btn btn-dark">Tiếp tục mua hàng</a>
+                <a href="javascript: Clear()"><div class="btn btn-primary">Xóa toàn bộ</div></a>
+            </div>
+            <!-- end drop box -->
         </div>
         <div class="giohang-right">
             <div class="vekhuyenmai">
@@ -181,12 +191,57 @@
                     <br>
                     <input type="radio" name="address"> <label>Quận 10 - TP. HCM</label>
                 </form>
-                @{ 
+                @{
                     ShoppingCart obj = new ShoppingCart();
                 }
-                <h4>Thành tiền: <span>@obj.CartTotal() ₫</span></h4>
+                <h4>Thành tiền: <span id="total">@obj.CartTotal() ₫</span></h4>
             </div>
             <a href="/Cart/Checkout"><div class="btn-danger thanhtoan">Thanh toán</div></a>
         </div>
     </div>
 </div>
+<script src="~/Assets/js/jquery-3.5.1.js"></script>
+<script>
+    // Ham cap nhat gio hang
+    function changePrice(id) {
+        var number = document.getElementById("numb_" + id).value;
+        $.ajax({
+            url: "/Cart/Update/" + id + "?number=" + number,
+            success: function (result) {
+                $("#content_left").empty();
+                $("#content_left").append(result);
+            }
+        })
+    }
+    //Ham xoa mat hang
+    function Delete_Load(id) {
+        $.ajax({
+            url: "/Cart/Remove/" + id,
+            success: function (result) {
+                $("#content_left").empty();
+                $("#content_left").append(result);
+            }
+        })
+    }
+
+    function Clear() {
+        $.ajax({
+            url: "/Cart/Clear",
+            success: function (result) {
+                $("#content_left").empty();
+                $("#content_left").append(result);
+            }
+        })
+    }
+    //
+    function UpdateCart() {
+        $.ajax({
+            url: "/Cart/NumberReload",
+            success: function (result) {
+                $("#count_cart").empty();
+                $("#count_cart").append(result);
+            }
+        })
+    }
+
+</script>

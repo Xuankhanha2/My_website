@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = "~/Views/Shared/_layoutTrong.cshtml";
+    Layout = null;
 }
 @using TrangChuWebsite.Models
 @using PagedList.Mvc;
@@ -38,11 +38,7 @@
         }
     }
 }
-<div class="home-content" style="min-height: 300px">
-    <!-- Mục hai -->
-   
 
-    <div class="trai-cay-moi-ngay">
         <div class="tcmn-title">@GetCategories(Convert.ToInt32(ViewBag.id))</div>
         <div style="margin-top: 15px"><a href="/Product/PhanLoaiSanPham/@ViewBag.id"> << Back  </a></div>
         <div class="tcmn-content">
@@ -73,5 +69,4 @@
             </ul>
         </div>
         @Html.PagedListPager(Model, page => Url.Action("FilterPrice", new { id = ViewBag.id, page }))
-    </div>
-</div>
+

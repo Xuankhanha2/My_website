@@ -229,17 +229,24 @@ namespace TrangChuWebsite.Controllers
         //Danh sach san pham ua thic
         public ActionResult Wishlist(int id, int? page)
         {
-            int pageSize = 8;
-            int pageNumber = page ?? 1;
-            int _customer_id = id;
-            List<Wishlist> listWishlist = db.Wishlists.Where(tbl => tbl.customer_id == _customer_id).ToList();
-            List<Product> listProduct = new List<Product>();
-            foreach (Wishlist item in listWishlist)
+            if(this.Session["Customer_email"]!= null)
             {
-                Product record = db.Products.Where(tbl => tbl.id == item.product_id).FirstOrDefault();
-                listProduct.Add(record);
+                int pageSize = 8;
+                int pageNumber = page ?? 1;
+                int _customer_id = id;
+                List<Wishlist> listWishlist = db.Wishlists.Where(tbl => tbl.customer_id == _customer_id).ToList();
+                List<Product> listProduct = new List<Product>();
+                foreach (Wishlist item in listWishlist)
+                {
+                    Product record = db.Products.Where(tbl => tbl.id == item.product_id).FirstOrDefault();
+                    listProduct.Add(record);
+                }
+                return View("Wishlist", listProduct.ToPagedList(pageNumber, pageSize));
             }
-            return View("Wishlist", listProduct.ToPagedList(pageNumber, pageSize));
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
         }
 
         public ActionResult AddWishlist(int id, int customer_id)

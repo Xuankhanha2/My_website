@@ -104,7 +104,7 @@
     <div class="giohang">
         <div class="giohang-left">
             <!-- drop-box -->
-            <form action="/Cart/Update" method="post">
+            <form action="" method="post" onsubmit="false">
                 <div class="san-pham-duoc-them">
                     <table class="list-product">
                         <tr>
@@ -116,12 +116,11 @@
                         </tr>
                         @foreach (Product item in Model)
                         {
-
                             <tr>
                                 <td><img src="~/Assets/Upload/Products/@item.photo" alt=""></td>
                                 <td><a href="/Product/ChiTietSanPham/@item.id">@item.name</a></td>
                                 <td>@item.price đ</td>
-                                <td><a href="/Cart/Add/@item.id" class="btn btn-primary" style="font-size: 16px; margin: 0px; margin-left:25px;"><i class="fas fa-cart-plus"></i></a></td>
+                                <td><a href="javascript: UpdateCart(@item.id);" class="btn btn-primary" style="font-size: 16px; margin: 0px; margin-left:25px;"><i class="fas fa-cart-plus"></i></a></td>
                                 <td valign="top" class="delete-product"><a href="/Product/DeleteWishlist/@item.id?customer_id=@Convert.ToInt32(this.Session["Customer_id"])"><i class="fas fa-times"></i></a></td>
                             </tr>
                         }
@@ -136,4 +135,15 @@
         </div>
     </div>
 </div>
-
+<script src="~/Assets/js/jquery-3.5.1.js"></script>
+<script>
+    function UpdateCart(id) {
+        $.ajax({
+            url: "/Cart/Add/" + id,
+            success: function (result) {
+                $("#count_cart").empty();
+                $("#count_cart").append(result);
+            }
+        })
+    }
+</script>

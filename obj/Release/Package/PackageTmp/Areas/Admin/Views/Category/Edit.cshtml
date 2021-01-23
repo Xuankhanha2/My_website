@@ -75,7 +75,7 @@
     <form action="" method="post">
         @Html.AntiForgeryToken()
         <label>Tên sản phẩm</label>
-        <input type="text" name="tensanpham" value="@if (Model != null) {<text>@Model["tensanpham"]</text>} " class="txt">
+        <input type="text" name="tensanpham" value="@if (Model != null) {<text>@Model["tensanpham"]</text>} " class="txt" required>
         <label>Parent</label>
         <select name="parent_id">
             @{

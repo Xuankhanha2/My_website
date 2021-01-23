@@ -22,7 +22,7 @@
                             <h1>Đăng ký tài khoản</h1>
                         </a>
                     </div>
-                    <div class="login-form">
+                    <div class="login-form" onsubmit="check()">
                         <form action="" method="post">
                             @Html.AntiForgeryToken()
                             <div class="form-group">
@@ -31,7 +31,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Số điện thoại</label>
-                                <input class="au-input au-input--full" type="text" name="phone" value="(+84)" required>
+                                <input class="au-input au-input--full" type="text" name="phone" value="+84" required id="phone">
                             </div>
                             <div class="form-group">
                                 <label>Địa chỉ:</label>
@@ -63,3 +63,18 @@
         </div>
     </div>
 </div>
+<script>
+    var b = document.getElementById("phone").value;
+    function check(){
+        var a = document.getElementById("phone").value;
+        reg = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
+        if(reg.test(a) == false){
+            alert("Số điện thoại chưa đúng");
+            document.getElementById("phone").value = b;
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+</script>

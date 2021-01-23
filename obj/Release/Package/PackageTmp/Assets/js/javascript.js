@@ -28,6 +28,8 @@ $(document).ready(function(){
         $("#map2").addClass("bubble");
         $("#map1").removeClass("bubble");
     })
+
+
 });
 
 

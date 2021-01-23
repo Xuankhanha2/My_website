@@ -109,6 +109,8 @@ $(document).ready(function () {
         });
     })
     //nut tang so luong va giam so luong hang
+});
+$(document).ready(function () {
     $('#btn-cong').click(function () {
         var sl = $('#soluong').val();
         sl = parseInt(sl) + 1;
@@ -123,4 +125,5 @@ $(document).ready(function () {
         }
         $('#soluong').attr('value', sl.toString());
     });
-});
+
+})
