@@ -7,14 +7,139 @@
         return listRecord;
     }
 }
-
-<script>
-    function Search() {
-        var _key = document.getElementById("key").value
-        location.href = "/Product/Search?key=" + _key
+<style scoped>
+    .main-menu {
+        margin: 0px;
+        padding: 0px;
+        background-color: #83bb3e;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
     }
-</script>
 
+    .menu-content {
+        margin: 0px auto;
+        padding: 0px;
+        width: 1200px;
+        display: flex;
+    }
+
+    .menu-left {
+        margin: 0px;
+        padding: 0px;
+        line-height: 45px;
+        width: 70%;
+    }
+
+        .menu-left ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            line-height: 45px;
+            position: relative;
+        }
+
+            .menu-left ul li {
+                display: inline-block;
+                margin: 0px;
+                padding: 0px;
+                text-align: center;
+                padding: 0px 15px;
+            }
+
+                .menu-left ul li a {
+                    text-decoration: none;
+                    color: #FFF;
+                }
+
+                .menu-left ul li:hover {
+                    background-color: #058134;
+                }
+
+    .menu-content ul li ul {
+        margin: 0px;
+        padding: 0px;
+        width: 1200px;
+        background-color: #fef79c;
+        line-height: 50px;
+        position: absolute;
+        top: 45px;
+        left: 0px;
+        border-radius: 0px 0px 10px 10px;
+        list-style: disc !important;
+        border: 1px solid #ff5722;
+        border-top: 0px;
+        display: none;
+    }
+
+        .menu-content ul li ul li {
+            margin: 0px;
+            padding: 0px;
+            line-height: 50px;
+            padding: 0px 20px;
+            display: inline-block;
+        }
+
+            .menu-content ul li ul li:hover {
+                background-color: #fef79c;
+            }
+
+                .menu-content ul li ul li:hover a {
+                    color: #5c3d21;
+                }
+
+            .menu-content ul li ul li a {
+                color: #000;
+                text-decoration: none;
+            }
+
+    .menu-left ul li:hover ul {
+        display: block;
+    }
+
+    .search {
+        padding: 0px;
+        margin: 0px;
+        width: 30%;
+        line-height: 45px;
+        text-align: right;
+    }
+
+        .search input {
+            border: 0px;
+            height: 30px;
+            margin: 0px;
+            padding: 0px;
+            width: 250px;
+            margin-top: 2px;
+        }
+
+        .search button {
+            padding: 0px;
+            margin: 0px;
+            height: 30px;
+            width: 30px;
+        }
+
+        .search .search-bg {
+            background-color: white;
+            line-height: 34px;
+            margin: 0px;
+            padding: 0px;
+            margin-top: 5px;
+            width: 300px;
+            padding: 0px 10px;
+            border-radius: 30px;
+        }
+
+    .home-content {
+        margin: 0px auto;
+        padding: 0px;
+        width: 1200px;
+        margin-top: 10px;
+    }
+
+</style>
 <div class="main-menu">
     <div class="menu-content">
         <div class="menu-left">
@@ -108,5 +233,11 @@
         else {
             document.getElementById("smart-search").setAttribute("style", "display: none;");
         }
+    }
+</script>
+<script>
+    function Search() {
+        var _key = document.getElementById("key").value
+        location.href = "/Product/Search?key=" + _key
     }
 </script>

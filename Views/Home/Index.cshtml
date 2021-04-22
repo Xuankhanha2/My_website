@@ -3,6 +3,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @using TrangChuWebsite.Models;
+@{ 
+    //Declare
+    BaseClass baseClass = new BaseClass();
+}
 @functions{
     DataContext db = new DataContext();
     //lay danh sach lan 1
@@ -70,8 +74,8 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <h2>@item.price đ</h2>
-                        <p>@priceDiscount(item.price, item.discount) ₫</p>
+                        <h2>@baseClass.formatMoney(item.price) đ</h2>
+                        <p>@baseClass.formatMoney(priceDiscount(item.price, item.discount)) ₫</p>
                         @if(Convert.ToInt32(item.discount) > 0)
                         {
                         <div class="sale">-@item.discount%</div>
@@ -109,8 +113,8 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <h2>@item.price đ</h2>
-                        <p>@priceDiscount(item.price, item.discount) ₫</p>
+                        <h2>@baseClass.formatMoney(item.price) đ</h2>
+                        <p>@baseClass.formatMoney(priceDiscount(item.price, item.discount)) ₫</p>
                         <a href="/Product/AddWishlist/@item.id?customer_id=@Convert.ToInt32(this.Session["Customer_id"])" class="wishlist"><i class="far fa-heart"></i></a>
                         <a href="javascript: UpdateCart(@item.id)"><div class="buy btn-primary">Mua hàng</div></a>
                     </li>

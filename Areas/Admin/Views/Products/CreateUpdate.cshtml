@@ -124,7 +124,7 @@
         <label>Giảm giá (%)</label>
         <input type="text" name="discount" id="discount" value="@if (Model != null) {<text>@Model["discount"]</text>}" class="txt" required/>
 
-        <label>Description</label>
+        <label style="margin-top: 24px">Mô tả</label>
         <textarea name="description" class="txtarea" id="description">@if (Model != null) {<text>@Model["description"]</text>}</textarea>
         <script language="javascript">
             CKEDITOR.replace("description");
@@ -135,7 +135,7 @@
             <input type="checkbox" name="content" id="content" style="margin-top: 8px; margin-right: 10px;" @if (Model != null && Convert.ToInt32(Model["content"]) == 1) { <text> checked</text>} /> <span>Còn hàng</span>
         </div>
         <br />
-        <label>Hot product</label>
+        <label>Sản phẩm hot</label>
         <input type="checkbox" class="ckbox" name="hot" @if (Model != null && Model["hot"] == 1) {<text>checked</text>}/>
         <br />
         <label>Thêm ảnh</label>

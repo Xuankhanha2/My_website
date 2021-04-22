@@ -6,6 +6,19 @@
 @using PagedList.Mvc
 @* Lay duoc Model list ra de dua vao trang nay *@
 @model PagedList.IPagedList<Product>
+@functions{
+    string formatHot(int hot)
+    {
+        if(hot == 1)
+        {
+            return "Đang hot";
+        }
+        else
+        {
+            return "Thường";
+        }
+    }
+}
 <style>
     .user-content {
         margin: 0px;
@@ -91,34 +104,40 @@
 </style>
 <div class="user-content">
     <div style="width: 95%; margin: auto;">
-        <div class="btn_add"><a href="/Admin/Products/Create">Add Products</a></div>
+        <div class="btn_add"><a href="/Admin/Products/Create">
+             Thêm sản phẩm</a></div>
     </div>
     <table border="0" cellpadding="5">
         <tr align="left" style="background: #333;">
-            <th>Image</th>
-            <th>Title</th>
-            <th>Hot</th>
+            <th>Ảnh chính</th>
+            <th>Tên sản phẩm</th>
+            <th>Giá sản phẩm</th>
+            <th>Sản phẩm hot</th>
             <th> </th>
         </tr>
         <!-- phan co so du leu -->
+        @{
+            BaseClass baseClass = new BaseClass();
+        }
         @foreach (Product item in Model)
         {
-    <tr align="left" class="hang">
-        <td><img src="~/Assets/Upload/Products/@item.photo" /></td>
+        <tr align="left" class="hang">
+        <td><img src="~/Assets/Upload/Products/@item.photo"/></td>
         <td>@item.name</td>
-        @*<td>@item.description</td>*@
-        @*<td>@item.content</td>*@
-        <td>@item.hot</td>
+        <td>@baseClass.formatMoney(item.price)</td>
+        <td>@formatHot(item.hot)</td>
         <td width="200">
-            <a href="/Admin/Products/Images/@item.id">Images</a>
-            <a href="/Admin/Products/Update/@item.id">Edit</a>
-            <a href="/Admin/Products/Delete/@item.id" onclick="return window.confirm('Bạn muốn xóa mặt hàng này?');">Delete</a>
+            <a href="/Admin/Products/Images/@item.id">Ảnh</a>
+            <a href="/Admin/Products/Update/@item.id">Sửa</a>
+            <a href="/Admin/Products/Delete/@item.id" onclick="return window.confirm('Bạn muốn xóa mặt hàng này?');">Xóa</a>
         </td>
     </tr>
         }
     </table>
     @Html.PagedListPager(Model, page => Url.Action("Read", new { page }))
 </div>
+<script>
+</script>
 
 
 

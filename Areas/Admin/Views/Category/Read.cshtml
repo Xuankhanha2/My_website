@@ -80,9 +80,9 @@
     .btn_add {
         border-radius: 8px;
         background-color: #333;
-        padding: 10px 0px;
+        padding: 10px 16px;
         text-align: center;
-        width: 160px;
+        display: inline-block
     }
 
         .btn_add a {
@@ -96,12 +96,12 @@
 </style>
 <div class="user-content">
     <div style="width: 95%; margin: auto;">
-        <div class="btn_add"><a href="/Admin/Category/Create">Add Category</a></div>
+        <div class="btn_add"><a href="/Admin/Category/Create">Thêm danh mục mới</a></div>
     </div>
     <table border="0" cellpadding="5">
         <tr align="left" style="background: #333;">
             @*<th>id</th>*@
-            <th>Tên sản phẩm</th>
+            <th>Tên danh mục</th>
             <th> </th>
         </tr>
         <!-- phan co so du leu -->
@@ -111,10 +111,11 @@
                 @*<td>@item.id</td>*@
                 <td>@item.tensanpham</td>
                 <td width="180px">
-                    <a href="/Admin/Category/Edit/@item.id">Edit</a>
-                    <a href="/Admin/Category/Delete/@item.id" onclick="return window.confirm('Bạn muốn xóa Category này?');">Delete</a>
+                    <a href="/Admin/Category/Edit/@item.id">Sửa</a>
+                    <a href="/Admin/Category/Delete/@item.id" onclick="return window.confirm('Bạn muốn xóa Category này?');">Xóa</a>
                 </td>
             </tr>
+            @*Hiện thị danh mục con nếu có*@
             List<Category> record = setSubList(item.id);
             foreach (Category subitem in record)
             {
@@ -122,8 +123,8 @@
                     @*<td>@item.id</td>*@
                     <td style="padding-left: 100px;">@subitem.tensanpham</td>
                     <td width="180px">
-                        <a href="/Admin/Category/Edit/@subitem.id">Edit</a>
-                        <a href="/Admin/Category/Delete/@subitem.id" onclick="return window.confirm('Bạn muốn xóa Category này?');">Delete</a>
+                        <a href="/Admin/Category/Edit/@subitem.id">Sửa</a>
+                        <a href="/Admin/Category/Delete/@subitem.id" onclick="return window.confirm('Bạn muốn xóa Category này?');">Xóa</a>
                     </td>
                 </tr>
             }

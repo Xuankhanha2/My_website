@@ -6,7 +6,19 @@
 @using PagedList.Mvc
 @* Lay duoc Model list ra de dua vao trang nay *@
 @model PagedList.IPagedList<News>
-
+@functions{
+    string HotShow(int isHot)
+    {
+        if(isHot == 1)
+        {
+            return "Tin hot";
+        }
+        else
+        {
+            return "";
+        }
+    }
+}
 <style>
     .user-content {
         margin: 0px;
@@ -93,15 +105,15 @@
 </style>
 <div class="user-content">
     <div style="width: 95%; margin: auto;">
-        <div class="btn_add"><a href="/Admin/News/Create">Add News</a></div>
+        <div class="btn_add"><a href="/Admin/News/Create">Thêm tin</a></div>
     </div>
     <table border="0" cellpadding="5">
         <tr align="left" style="background: #333;">
-            <th>Title</th>
+            <th>Tiêu đề tin</th>
             @*<th>Description</th>
             <th>Content</th>*@
-            <th>Hot</th>
-            <th>Image</th>
+            <th>Tin hot</th>
+            <th>Ảnh</th>
             <th> </th>
         </tr>
         <!-- phan co so du leu -->
@@ -111,11 +123,11 @@
                 <td>@item.name</td>
                 @*<td>@item.description</td>
                 <td>@item.content</td>*@
-                <td>@item.hot</td>
+                <td>@HotShow(item.hot)</td>
                 <td><img src="~/Assets/Upload/News/@item.photo"/></td>
                 <td width="160">
-                    <a href="/Admin/News/Update/@item.id">Edit</a>
-                    <a href="/Admin/News/Delete/@item.id" onclick="return window.confirm('Bạn muốn xóa News này?');">Delete</a>
+                    <a href="/Admin/News/Update/@item.id">Sửa</a>
+                    <a href="/Admin/News/Delete/@item.id" onclick="return window.confirm('Bạn muốn xóa News này?');">Xóa</a>
                 </td>
             </tr>
         }

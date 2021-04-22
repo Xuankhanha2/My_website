@@ -10,6 +10,11 @@
     }
 }
 @using TrangChuWebsite.Models
+@{ 
+    //Declare
+    BaseClass baseClass = new BaseClass();
+    
+}
 <style>
     .giohang {
         display: flex;
@@ -155,12 +160,12 @@
                             <tr>
                                 <td><img src="~/Assets/Upload/Products/@item.photo" alt=""></td>
                                 <td><a href="/Product/ChiTietSanPham/@item.id">@item.name</a></td>
-                                <td>@item.price ₫</td>
+                                <td>@baseClass.formatMoney(item.price) ₫</td>
                                 @* dùng @item.id để dánh  cho name để nhận diện được ô số lượng đấy là của mặt hàng nào *@
                                 <td>
                                     <input type="number" min="1" id="numb_@item.id" name="product_@item.id" value="@item.number" style="width: 50px" onchange="changePrice(@item.id); " onkeyup="changePrice(@item.id);">
                                 </td>
-                                <td>@item.toPrice ₫</td>
+                                <td>@baseClass.formatMoney(item.toPrice) ₫</td>
                                 <td valign="top" class="delete-product"><a href="javascript: Delete_Load(@item.id); UpdateCart();"><i class="fas fa-times"></i></a></td>
                             </tr>
                         }
@@ -194,7 +199,7 @@
                 @{
                     ShoppingCart obj = new ShoppingCart();
                 }
-                <h4>Thành tiền: <span id="total">@obj.CartTotal() ₫</span></h4>
+                <h4>Thành tiền: <span id="total">@baseClass.formatMoney(obj.CartTotal()) ₫</span></h4>
             </div>
             <a href="/Cart/Checkout"><div class="btn-danger thanhtoan">Thanh toán</div></a>
         </div>

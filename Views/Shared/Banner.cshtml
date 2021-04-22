@@ -7,6 +7,103 @@
         return Cart != null ? Cart.Count : 0;
     }
 }
+<style scoped>
+    .banner {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 0px;
+        display: flex;
+    }
+
+    .banner-logo {
+        margin: 0px;
+        padding: 0px;
+    }
+
+        .banner-logo img {
+            width: 200px;
+            height: 200px;
+        }
+
+    .banner-content {
+        padding: 0px;
+        margin: 0px;
+        width: 1000px;
+        height: 200px;
+        position: relative;
+    }
+
+        .banner-content ul {
+            list-style: none;
+            padding: 0px;
+            display: flex;
+            margin: 0px;
+            margin-top: 55px;
+            padding-left: 15px;
+        }
+
+            .banner-content ul li {
+                display: flex;
+                padding: 0px;
+                margin: 0px 20px;
+            }
+
+                .banner-content ul li img {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                .banner-content ul li h1 {
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin: 0px;
+                    padding: 0px;
+                    margin-top: 10px;
+                    padding-left: 5px;
+                }
+
+                .banner-content ul li p {
+                    padding: 0px;
+                    margin: 0px;
+                    font-size: 14px;
+                    color: #77778d;
+                    padding: 5px 5px;
+                }
+
+    .gio-hang {
+        background-color: #f99717;
+        position: absolute;
+        z-index: 0;
+        padding: 0px 10px;
+        border-radius: 20px;
+        line-height: 30px;
+        color: antiquewhite;
+        right: 10px;
+        top: 75px;
+    }
+
+        .gio-hang a {
+            text-decoration: none;
+            color: white;
+            margin-left: 5px;
+        }
+
+        .gio-hang #count_cart {
+            margin: 0px;
+            padding: 0px;
+            background-color: red;
+            width: 15px;
+            height: 15px;
+            text-align: center;
+            color: white;
+            font-size: 11px;
+            position: absolute;
+            line-height: 18px;
+            border-radius: 18px;
+            top: -5px;
+            right: 0px;
+        }
+</style>
 <div class="banner">
     <div class="banner-logo">
         <a href="/Home/index"><img src="~/Assets/images/Banner-logo.jpg" alt=""></a>

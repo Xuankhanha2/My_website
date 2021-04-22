@@ -1,17 +1,125 @@
-﻿<header class="header">
+﻿<style>
+    .header {
+        margin: 0px;
+        padding: 0px;
+        line-height: 35px;
+        background-color: #83bb3e;
+    }
+
+    .header-content {
+        display: flex;
+        margin: 0px;
+        padding: 0px;
+        line-height: 35px;
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .header-left {
+        margin: 0px;
+        padding: 0px;
+        width: 50%;
+        text-align: left;
+    }
+
+        .header-left ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+
+            .header-left ul li {
+                display: inline-block;
+                margin-right: 15px;
+            }
+
+                .header-left ul li a {
+                    font-size: 14px;
+                    text-decoration: none;
+                    color: white;
+                }
+
+                .header-left ul li i {
+                    color: #FFFFFF;
+                }
+
+    .header-right {
+        margin: 0px;
+        padding: 0px;
+        text-align: right;
+        width: 50%;
+    }
+
+        .header-right ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+
+            .header-right ul li {
+                min-width: 140px;
+                display: inline-block;
+                padding-right: 10px;
+                padding-left: 10px;
+                text-align: center;
+                position: relative;
+            }
+
+                .header-right ul li a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 14px;
+                }
+
+
+                .header-right ul li:hover ul {
+                    display: block;
+                }
+
+                .header-right ul li ul {
+                    background-color: #fff;
+                    display: none;
+                    position: absolute;
+                    z-index: 1000;
+                    right: 0px;
+                    top: 36px;
+                    border: 1px solid #dddddd;
+                    border-top: 0px
+                }
+
+                    .header-right ul li ul li {
+                        display: block;
+                        text-align: center;
+                        padding-right: 10px;
+                        padding-left: 10px;
+                    }
+
+                        .header-right ul li ul li:hover {
+                            background-color: #ebebeb;
+                        }
+
+                        .header-right ul li ul li a {
+                            color: darkred;
+                        }
+
+                        .header-right ul li ul li:hover a {
+                            color: blueviolet !important;
+                        }
+</style>
+<header class="header">
     <div class="header-content">
         <div class="header-left">
             <ul>
                 <li>
-                    <i class="fas fa-mobile-alt"></i>
+                    <i class="fas fa-mobile-alt h-icon"></i>
                     <a href="#" class="hotline">Hotline: 0985.334.786</a>
                 </li>
                 <li>
-                    <i class="far fa-envelope"></i>
+                    <i class="far fa-envelope h-icon"></i>
                     <a href="#" class="email">Email: freshfood24@gmail.com</a>
                 </li>
                 <li>
-                    <i class="fas fa-map-marker-alt"></i>
+                    <i class="fas fa-map-marker-alt h-icon"></i>
                     <a href="#" class="diachi">Địa chỉ: Hà Nội</a>
                 </li>
             </ul>
